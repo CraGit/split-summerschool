@@ -17,15 +17,31 @@ export const repositoryName =
  */
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
-  // Examples:
-  // {
-  // 	type: "homepage",
-  // 	path: "/",
-  // },
-  // {
-  // 	type: "page",
-  // 	path: "/:uid",
-  // },
+  {
+    type: "homepage",
+    path: "/",
+  },
+  {
+    type: "how_to_apply",
+    path: "/how-to-apply",
+  },
+  {
+    type: "university_of_split",
+    path: "/university-of-split",
+  },
+  {
+    type: "contact_us",
+    path: "/contact-us",
+  },
+
+  {
+    type: "courses",
+    path: "/courses",
+  },
+  {
+    type: "course",
+    path: "/courses/:uid",
+  },
 ];
 
 /**
