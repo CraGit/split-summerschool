@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar .navbar-nav .nav-link {
+  @apply font-medium text-[18px] leading-[initial] text-black relative transition-all duration-[0.3s] ease-[ease-in-out] mx-[26px] my-0 px-0 py-[13px];
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item:hover .nav-link {
+  @apply text-primary;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item:hover .nav-link {
+    @apply text-[color:var(--prime-one)];
+}
