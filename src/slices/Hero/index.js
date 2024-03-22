@@ -15,6 +15,7 @@ const Hero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="px-4 pt-16 sm:px-6 lg:px-8"
     >
       {/* Hero container */}
       <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 lg:gap-8">
