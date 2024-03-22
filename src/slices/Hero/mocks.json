@@ -3,17 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Irure ullamco dolor do ipsum commodo occaecat consequat eu laboris nisi."
-						}
-					}
-				]
-			},
 			"image": {
 				"origin": {
 					"id": "main",
@@ -53,6 +42,16 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "lonely",
+				"type": "Text"
+			},
+			"overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "collect",
+				"type": "Text"
 			}
 		},
 		"items": []
