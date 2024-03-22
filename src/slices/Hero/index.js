@@ -10,24 +10,6 @@ import { Button } from "@/components/Button";
  * @param {HeroProps}
  */
 
-const components = {
-  h1: ({ children }) => (
-    <h1 className="max-w-xl mt-4 text-center text-purple-900 sm:mt-5 lg:max-w-none lg:text-left text-5xl">
-      {children}
-    </h1>
-  ),
-  p: ({ children }) => (
-    <p className="max-w-2xl mt-3 text-xl leading-loose text-center text-purple-800 lg:text-left">
-      {children}
-    </p>
-  ),
-};
-
-const ratings = [
-  { label: "Great Schools", stars: 5 },
-  { label: "Private School Review", stars: 5 },
-  { label: "Google Reviews", stars: 5 },
-];
 const Hero = ({ slice }) => {
   return (
     <section
@@ -47,10 +29,7 @@ const Hero = ({ slice }) => {
               <>{slice.primary.overtitle}</>
             </span>
           </div>
-          {/* <PrismicRichText
-            field={slice.primary.heading}
-            components={components}
-          /> */}
+
           <h1
             className="
           max-w-xl mt-4 text-center text-purple-900 sm:mt-5 lg:max-w-none lg:text-left text-5xl font-extrabold lg:text-6xl"
@@ -72,7 +51,7 @@ const Hero = ({ slice }) => {
             </Button>
           </div>
         </div>
-        {/* Hero image & video */}
+        {/* Hero image  */}
         <div className="flex flex-col justify-center w-full max-w-3xl mx-auto mt-16 lg:col-span-6 lg:mt-0 lg:max-w-none">
           <div className="relative">
             <PrismicNextImage
