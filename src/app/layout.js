@@ -1,10 +1,13 @@
-import { Montserrat } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { createClient } from "@/prismicio";
 import clsx from "clsx";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const roboto = Roboto_Flex({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 export const metadata = {
   title: "Split Summer School",
@@ -28,7 +31,7 @@ export default async function RootLayout({ children }) {
   };
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={clsx("font-sans", roboto.variable)}>
         <Header navigation={navigation} contact={contact} programs={programs} />
         {children}
       </body>

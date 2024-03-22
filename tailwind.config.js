@@ -14,6 +14,10 @@ module.exports = {
         tertiary: "#b8d100", //green
         quaternary: "#23ffff", //blue
       },
+      fontFamily: {
+        sans: ["var(--font-roboto)", "sans-serif"],
+        written: ["var(--font-gochi-hand)", "cursive"],
+      },
     },
   },
   plugins: [],

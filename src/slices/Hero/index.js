@@ -15,13 +15,9 @@ const Hero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-4 pt-16 bg-gradient-to-b from-purple-25 to-purple-50 sm:px-6 lg:px-8"
     >
       {/* Hero container */}
-      <div
-        className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 lg:gap-8"
-        x-data="{ modalOpen: false }"
-      >
+      <div className="max-w-screen-xl mx-auto lg:grid lg:grid-cols-12 lg:gap-8">
         {/* Hero text content */}
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start">
           <div>
@@ -32,7 +28,7 @@ const Hero = ({ slice }) => {
 
           <h1
             className="
-          max-w-xl mt-4 text-center text-purple-900 sm:mt-5 lg:max-w-none lg:text-left text-5xl font-extrabold lg:text-6xl"
+          max-w-xl mt-4 text-center text-purple-900 sm:mt-5 lg:max-w-none lg:text-left h1"
           >
             {slice.primary.heading}
           </h1>
