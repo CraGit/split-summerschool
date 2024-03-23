@@ -1,0 +1,100 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "giant",
+				"type": "Text"
+			},
+			"overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "butter",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "five",
+				"type": "Text"
+			},
+			"box1_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "mission",
+				"type": "Text"
+			},
+			"box2_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "tube",
+				"type": "Text"
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "real",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"box1_content": {
+				"__TYPE__": "FieldContent",
+				"value": "ability",
+				"type": "Text"
+			},
+			"box1_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "climate",
+				"type": "Text"
+			},
+			"box2_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "land",
+				"type": "Text"
+			},
+			"box2_content": {
+				"__TYPE__": "FieldContent",
+				"value": "getting",
+				"type": "Text"
+			},
+			"box1_button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"box2_button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"box1_overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "there",
+				"type": "Text"
+			},
+			"box2_overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "please",
+				"type": "Text"
+			},
+			"box1_subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "thirty",
+				"type": "Text"
+			},
+			"box2_subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "property",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

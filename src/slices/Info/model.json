@@ -1,0 +1,141 @@
+{
+  "id": "info",
+  "type": "SharedSlice",
+  "name": "Info",
+  "description": "Info",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "overtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Overtitle",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "Content",
+            "placeholder": ""
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link Text",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "box1_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Box1 Heading",
+            "placeholder": ""
+          }
+        },
+        "box1_overtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Box1 Overtitle",
+            "placeholder": ""
+          }
+        },
+        "box1_subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Box1 Subtitle",
+            "placeholder": ""
+          }
+        },
+        "box1_content": {
+          "type": "Text",
+          "config": {
+            "label": "Box1 Content",
+            "placeholder": ""
+          }
+        },
+        "box1_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Box1 Button Text",
+            "placeholder": ""
+          }
+        },
+        "box1_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Box1 Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "box2_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Box2 Heading",
+            "placeholder": ""
+          }
+        },
+        "box2_overtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Box2 Overtitle",
+            "placeholder": ""
+          }
+        },
+        "box2_subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Box2 Subtitle",
+            "placeholder": ""
+          }
+        },
+        "box2_content": {
+          "type": "Text",
+          "config": {
+            "label": "Box2 Content",
+            "placeholder": ""
+          }
+        },
+        "box2_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Box2 Button Text",
+            "placeholder": ""
+          }
+        },
+        "box2_button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Box2 Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
