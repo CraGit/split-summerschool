@@ -196,6 +196,7 @@ export type CoursesDocument<Lang extends string = string> =
   >;
 
 type HomepageDocumentDataSlicesSlice =
+  | SmallGallerySlice
   | FeaturesSlice
   | InfoSlice
   | TextAndImageSlice
@@ -914,6 +915,131 @@ export type NavigationItemSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SmallGallery → Primary*
+ */
+export interface SmallGallerySliceDefaultPrimary {
+  /**
+   * Heading field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Content field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * Image 1 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_1: prismic.ImageField<never>;
+
+  /**
+   * Image 2 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+
+  /**
+   * Image 3 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_3
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_3: prismic.ImageField<never>;
+
+  /**
+   * Image 4 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_4
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_4: prismic.ImageField<never>;
+
+  /**
+   * Image 5 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_5
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_5: prismic.ImageField<never>;
+
+  /**
+   * Image 6 field in *SmallGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_gallery.primary.image_6
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_6: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SmallGallery Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallGallerySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallGallerySliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SmallGallery*
+ */
+type SmallGallerySliceVariation = SmallGallerySliceDefault;
+
+/**
+ * SmallGallery Shared Slice
+ *
+ * - **API ID**: `small_gallery`
+ * - **Description**: SmallGallery
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallGallerySlice = prismic.SharedSlice<
+  "small_gallery",
+  SmallGallerySliceVariation
+>;
+
+/**
  * Primary content in *TextAndImage → Primary*
  */
 export interface TextAndImageSliceDefaultPrimary {
@@ -1058,6 +1184,10 @@ declare module "@prismicio/client" {
       NavigationItemSliceDefaultItem,
       NavigationItemSliceVariation,
       NavigationItemSliceDefault,
+      SmallGallerySlice,
+      SmallGallerySliceDefaultPrimary,
+      SmallGallerySliceVariation,
+      SmallGallerySliceDefault,
       TextAndImageSlice,
       TextAndImageSliceDefaultPrimary,
       TextAndImageSliceVariation,

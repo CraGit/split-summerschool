@@ -7,5 +7,6 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   info: dynamic(() => import("./Info")),
   navigation_item: dynamic(() => import("./NavigationItem")),
+  small_gallery: dynamic(() => import("./SmallGallery")),
   text_and_image: dynamic(() => import("./TextAndImage")),
 };
