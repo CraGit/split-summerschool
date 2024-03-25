@@ -592,6 +592,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button_link: prismic.LinkField;
+
+  /**
+   * Video Embed Link field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.video_embed_link
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  video_embed_link: prismic.KeyTextField;
 }
 
 /**

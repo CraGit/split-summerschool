@@ -30,7 +30,7 @@ export default async function RootLayout({ children }) {
     phone: "+385 21 303 366",
   };
   return (
-    <html lang="en" className="bg-gradient-to-b from-purple-50 to-purple-100">
+    <html lang="en" className="bg-gradient-to-b">
       <body className={clsx("font-sans", roboto.variable)}>
         <Header navigation={navigation} contact={contact} programs={programs} />
         {children}

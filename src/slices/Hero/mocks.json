@@ -33,7 +33,7 @@
 			},
 			"button_text": {
 				"__TYPE__": "FieldContent",
-				"value": "becoming",
+				"value": "finger",
 				"type": "Text"
 			},
 			"button_link": {
@@ -51,6 +51,11 @@
 			"overtitle": {
 				"__TYPE__": "FieldContent",
 				"value": "collect",
+				"type": "Text"
+			},
+			"video_embed_link": {
+				"__TYPE__": "FieldContent",
+				"value": "carry",
 				"type": "Text"
 			}
 		},

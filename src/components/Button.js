@@ -3,9 +3,9 @@ import { PrismicNextLink } from "@prismicio/next";
 import clsx from "clsx";
 
 const variantStyles = {
-  primaryClassName: "text-purple-900 bg-primary hover:bg-yellow-600",
+  primaryClassName: "text-black bg-primary hover:bg-yellow-600",
   secondaryClassName:
-    "text-purple-900 bg-purple-200 hover:text-white hover:bg-purple-600",
+    "text-black bg-purple-200 hover:text-white hover:bg-purple-600",
   accentClassName: "text-white bg-purple-600 hover:bg-purple-500",
 };
 
