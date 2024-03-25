@@ -4,10 +4,6 @@
  * @param {FeaturesProps}
  */
 import Image from "next/image";
-import clsx from "clsx";
-
-import { Icon } from "@/components/Icon";
-import { Button } from "@/components/Button";
 import checkmark from "/public/images/illustrations/checkmark.svg";
 
 const Features = ({ slice }) => {
