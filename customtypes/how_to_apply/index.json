@@ -1,14 +1,24 @@
 {
   "format": "page",
   "id": "how_to_apply",
+  "label": "How To Apply",
+  "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "process": {
+              "type": "SharedSlice"
+            },
+            "small_hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -38,8 +48,5 @@
         "type": "Text"
       }
     }
-  },
-  "label": "How To Apply",
-  "repeatable": false,
-  "status": true
+  }
 }

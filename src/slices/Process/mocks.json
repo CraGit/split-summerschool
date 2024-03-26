@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "exactly",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "crew",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "easily",
+							"type": "Text"
+						}
+					],
+					[
+						"content",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "hold",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

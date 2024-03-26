@@ -8,6 +8,8 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   info: dynamic(() => import("./Info")),
   navigation_item: dynamic(() => import("./NavigationItem")),
+  process: dynamic(() => import("./Process")),
   small_gallery: dynamic(() => import("./SmallGallery")),
+  small_hero: dynamic(() => import("./SmallHero")),
   text_and_image: dynamic(() => import("./TextAndImage")),
 };

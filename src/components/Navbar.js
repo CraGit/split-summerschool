@@ -23,32 +23,32 @@ export function Navbar({ programs, navigation }) {
           className={clsx(
             "absolute block h-1 rotate-0 transform rounded-full opacity-100 transition-all duration-300 ease-in-out",
             open
-              ? "left-1/2 top-2 w-0 bg-purple-50 group-hover:bg-white"
-              : "left-0 top-0 w-full bg-purple-900 group-hover:bg-purple-600"
+              ? "left-1/2 top-2 w-0 bg-white group-hover:bg-white"
+              : "left-0 top-0 w-full bg-dark group-hover:bg-dark/80"
           )}
         />
         <span
           className={clsx(
-            "absolute left-0 top-2 block h-1 w-full transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-purple-600",
+            "absolute left-0 top-2 block h-1 w-full transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-dark/80",
             open
               ? "rotate-45 bg-purple-50 group-hover:bg-white"
-              : "rotate-0 bg-purple-900 group-hover:bg-purple-600"
+              : "rotate-0 bg-dark group-hover:bg-dark/80"
           )}
         />
         <span
           className={clsx(
-            "absolute left-0 top-2 block h-1 w-full transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-purple-600",
+            "absolute left-0 top-2 block h-1 w-full transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-dark/80",
             open
               ? "-rotate-45 bg-purple-50 group-hover:bg-white"
-              : "rotate-0 bg-purple-900 group-hover:bg-purple-600"
+              : "rotate-0 bg-dark group-hover:bg-dark/80"
           )}
         />
         <span
           className={clsx(
-            "absolute block h-1 rotate-0 transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-purple-600",
+            "absolute block h-1 rotate-0 transform rounded-full opacity-100 transition-all duration-300 ease-in-out group-hover:bg-dark/80",
             open
               ? "left-1/2 top-2 w-0 bg-purple-50 group-hover:bg-white"
-              : "left-0 top-4 w-full bg-purple-900 group-hover:bg-purple-600"
+              : "left-0 top-4 w-full bg-dark group-hover:bg-dark/80"
           )}
         />
       </>
@@ -77,7 +77,7 @@ export function Navbar({ programs, navigation }) {
           >
             <Popover.Panel
               as="div"
-              className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-gradient-to-tr from-purple-600 to-purple-600 px-4 py-16 sm:px-8"
+              className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-gradient-to-tr from-tertiary/90 to-tertiary px-4 py-16 sm:px-8"
             >
               <div className="flex h-full w-full flex-col items-center justify-center">
                 <div className="mx-auto flex w-full flex-col items-center justify-evenly space-y-6">
@@ -85,7 +85,7 @@ export function Navbar({ programs, navigation }) {
                     <Fragment key={`mobile-link-${item.primary.label}`}>
                       <PrismicNextLink field={item.primary.link}>
                         <div className="group relative p-0.5">
-                          <span className="relative z-10 text-2xl font-medium text-purple-50 duration-300 ease-in-out group-hover:text-white">
+                          <span className="relative z-10 text-2xl font-medium text-dark duration-300 ease-in-out group-hover:text-white">
                             {item.primary.label}
                           </span>
                           <span className="absolute -left-1 -right-1 bottom-0 h-1.5 origin-bottom scale-x-0 transform rounded-lg bg-yellow-400 duration-300 ease-in-out group-hover:scale-x-100" />

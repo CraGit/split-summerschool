@@ -265,7 +265,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type HowToApplyDocumentDataSlicesSlice = never;
+type HowToApplyDocumentDataSlicesSlice = ProcessSlice | SmallHeroSlice;
 
 /**
  * Content for How To Apply documents
@@ -942,6 +942,86 @@ export type NavigationItemSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Process → Primary*
+ */
+export interface ProcessSliceDefaultPrimary {
+  /**
+   * Heading field in *Process → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *Process → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Process → Items*
+ */
+export interface ProcessSliceDefaultItem {
+  /**
+   * Heading field in *Process → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.items[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *Process → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: process.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Process Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProcessSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProcessSliceDefaultPrimary>,
+  Simplify<ProcessSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Process*
+ */
+type ProcessSliceVariation = ProcessSliceDefault;
+
+/**
+ * Process Shared Slice
+ *
+ * - **API ID**: `process`
+ * - **Description**: Process
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProcessSlice = prismic.SharedSlice<
+  "process",
+  ProcessSliceVariation
+>;
+
+/**
  * Primary content in *SmallGallery → Primary*
  */
 export interface SmallGallerySliceDefaultPrimary {
@@ -1064,6 +1144,71 @@ type SmallGallerySliceVariation = SmallGallerySliceDefault;
 export type SmallGallerySlice = prismic.SharedSlice<
   "small_gallery",
   SmallGallerySliceVariation
+>;
+
+/**
+ * Primary content in *SmallHero → Primary*
+ */
+export interface SmallHeroSliceDefaultPrimary {
+  /**
+   * Heading field in *SmallHero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_hero.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *SmallHero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_hero.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Content field in *SmallHero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: small_hero.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for SmallHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallHeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SmallHeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SmallHero*
+ */
+type SmallHeroSliceVariation = SmallHeroSliceDefault;
+
+/**
+ * SmallHero Shared Slice
+ *
+ * - **API ID**: `small_hero`
+ * - **Description**: SmallHero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SmallHeroSlice = prismic.SharedSlice<
+  "small_hero",
+  SmallHeroSliceVariation
 >;
 
 /**
@@ -1214,10 +1359,19 @@ declare module "@prismicio/client" {
       NavigationItemSliceDefaultItem,
       NavigationItemSliceVariation,
       NavigationItemSliceDefault,
+      ProcessSlice,
+      ProcessSliceDefaultPrimary,
+      ProcessSliceDefaultItem,
+      ProcessSliceVariation,
+      ProcessSliceDefault,
       SmallGallerySlice,
       SmallGallerySliceDefaultPrimary,
       SmallGallerySliceVariation,
       SmallGallerySliceDefault,
+      SmallHeroSlice,
+      SmallHeroSliceDefaultPrimary,
+      SmallHeroSliceVariation,
+      SmallHeroSliceDefault,
       TextAndImageSlice,
       TextAndImageSliceDefaultPrimary,
       TextAndImageSliceVariation,
