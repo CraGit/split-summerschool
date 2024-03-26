@@ -13,7 +13,7 @@ const Info = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative w-full px-4 sm:px-6  xl:px-8 my-16 "
+      className="relative w-full px-4 sm:px-6  xl:px-8 py-16 "
     >
       {/* Container */}
       <div className="mx-auto max-w-xl lg:max-w-screen-xl">

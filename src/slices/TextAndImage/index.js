@@ -19,7 +19,7 @@ import { PrismicRichText } from "@prismicio/react";
 const bgBlobs = [lightYellowBlob, lightPurpleBlob, lightRoseBlob];
 const components = {
   paragraph: ({ children }) => (
-    <p className="mt-3 max-w-xl text-lg text-purple-800 sm:text-xl sm:leading-relaxed">
+    <p className="mt-3 max-w-xl text-lg text-dark sm:text-xl sm:leading-relaxed">
       {children}
     </p>
   ),
@@ -30,7 +30,7 @@ const TextAndImage = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="overflow-hidden px-4 sm:px-6 lg:px-8 my-16"
+      className="overflow-hidden px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Block 1 */}
@@ -43,12 +43,12 @@ const TextAndImage = ({ slice }) => {
             )}
           >
             <div>
-              <span className="inline-block -rotate-1 rounded-full bg-purple-200 px-4 py-2 font-medium text-purple-700 shadow-md">
+              <span className="inline-block -rotate-1 rounded-full bg-secondary/20 px-4 py-2 font-medium text-secondary shadow-md">
                 <>{slice.primary.overtitle}</>
               </span>
             </div>
             <div>
-              <h2 className="h3 mt-3.5 font-bold text-purple-900">
+              <h2 className="h3 mt-3.5 font-bold text-secondary">
                 <>{slice.primary.heading}</>
               </h2>
 
