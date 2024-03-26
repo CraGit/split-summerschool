@@ -11,11 +11,13 @@ const SmallHero = ({ slice }) => {
       className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-tertiary/50"
     >
       <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start px-6 py-8 rounded-2xl">
-        <div>
-          <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/80 rounded-full shadow-md -rotate-1">
-            <>{slice.primary.overtitle}</>
-          </span>
-        </div>
+        {slice.primary.overtitle && (
+          <div>
+            <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/80 rounded-full shadow-md -rotate-1">
+              <>{slice.primary.overtitle}</>
+            </span>
+          </div>
+        )}
 
         <h1
           className="
