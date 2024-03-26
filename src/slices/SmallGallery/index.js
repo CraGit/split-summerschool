@@ -14,7 +14,7 @@ const SmallGallery = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative bg-purple-25 px-4 pt-16 sm:px-6 lg:px-8"
+      className="relative bg-purple-25 px-4 sm:px-6 lg:px-8 my-16"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Hero header text */}

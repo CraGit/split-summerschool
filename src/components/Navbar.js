@@ -12,15 +12,6 @@ import logo from "/public/images/logo.png";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 
-// const navigation = [
-//   { label: "Home", href: "/" },
-//   { label: "About", href: "/about" },
-//   { label: "Programs" },
-//   { label: "Gallery", href: "/gallery" },
-//   { label: "Parents", href: "/parents" },
-//   { label: "Contact", href: "/contact" },
-// ];
-
 export function Navbar({ programs, navigation }) {
   const pathname = usePathname();
   console.log(navigation);

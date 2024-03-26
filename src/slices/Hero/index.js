@@ -25,12 +25,12 @@ const Hero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-4 pt-16 sm:px-6 lg:px-8"
+      className="px-4 sm:px-6 lg:px-8 pb-8 md:my-16"
     >
       {/* Hero container */}
       <div className="max-w-screen-xl mx-auto" x-data="{ modalOpen: false }">
         {/* Hero text content */}
-        <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start bg-primary/30 px-6 py-8 rounded-2xl">
+        <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start px-6 py-8 rounded-2xl">
           <div>
             <span className="inline-block px-4 py-2 font-medium text-secondary bg-secondary/20 rounded-full shadow-md -rotate-1">
               <>{slice.primary.overtitle}</>
@@ -43,23 +43,19 @@ const Hero = ({ slice }) => {
           >
             {slice.primary.heading}
           </h1>
-          <p className="max-w-2xl mt-3 text-xl leading-loose text-center text-black lg:text-left">
-            {slice.primary.subheading}
-          </p>
-          <div className="flex flex-col justify-center w-full max-w-3xl mx-auto mt-16 lg:col-span-6 lg:mt-0 lg:max-w-none">
-            <div className="relative rounded-2xl overflow-hidden">
+          <div className="flex flex-col justify-center w-full max-w-3xl mx-auto my-2 md:my-6 lg:col-span-6 lg:mt-0 lg:max-w-none">
+            <div className="relative rounded-2xl overflow-hidden ">
               <PrismicNextImage
                 field={slice.primary.image}
                 priority
                 className="w-full h-auto"
-                alt="Bright Photo Collage"
                 sizes="(min-width: 1280px) 39rem, (min-width: 1024px) 50vw, (min-width: 768px) 48rem, 100vw"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="absolute inline-flex w-20 h-20 bg-purple-400 rounded-full animate-ping opacity-60" />
+                <span className="absolute inline-flex w-20 h-20 bg-secondary rounded-full animate-ping opacity-60" />
                 {/* Video modal button */}
                 <button
-                  className="relative z-10 flex items-center justify-center w-20 h-20 duration-300 ease-in-out rounded-full outline-none group bg-purple-600/90 hover:bg-purple-600/95"
+                  className="relative z-10 flex items-center justify-center w-20 h-20 duration-300 ease-in-out rounded-full outline-none group bg-secondary/90 hover:bg-secondary/95"
                   onClick={() => openModal()}
                 >
                   <Icon
@@ -70,6 +66,10 @@ const Hero = ({ slice }) => {
               </div>
             </div>
           </div>
+          <p className="max-w-2xl mt-3 text-xl leading-loose text-center text-dark lg:text-left">
+            {slice.primary.subheading}
+          </p>
+
           {/* Hero buttons */}
           <div className="flex flex-col items-center mt-8 overflow-hidden sm:flex-row">
             <Button href={slice.primary.button_link}>
@@ -80,17 +80,17 @@ const Hero = ({ slice }) => {
                 stroke={2}
               />
             </Button>
-            <Button
+            {/* <Button
               variant="secondary"
               className="mt-6 sm:ml-6 sm:mt-0"
               onClick={() => openModal()}
             >
               <Icon
                 icon="playFilled"
-                className="mr-3 text-purple-600 duration-300 ease-in-out h-7 w-7 group-hover:text-purple-50"
+                className="mr-3 text-secondary duration-300 ease-in-out h-7 w-7 group-hover:text-purple-50"
               />
               Watch video
-            </Button>
+            </Button> */}
           </div>
         </div>
 

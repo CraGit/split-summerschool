@@ -461,6 +461,33 @@ export type AllDocumentTypes =
   | UniversityOfSplitDocument;
 
 /**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Cta*
+ */
+type CtaSliceVariation = CtaSliceDefault;
+
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: Cta
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+
+/**
  * Primary content in *Features → Primary*
  */
 export interface FeaturesSliceDefaultPrimary {
@@ -1166,6 +1193,9 @@ declare module "@prismicio/client" {
       UniversityOfSplitDocumentData,
       UniversityOfSplitDocumentDataSlicesSlice,
       AllDocumentTypes,
+      CtaSlice,
+      CtaSliceVariation,
+      CtaSliceDefault,
       FeaturesSlice,
       FeaturesSliceDefaultPrimary,
       FeaturesSliceDefaultItem,
