@@ -69,7 +69,16 @@ export type ContactUsDocument<Lang extends string = string> =
     Lang
   >;
 
-type CourseDocumentDataSlicesSlice = never;
+type CourseDocumentDataSlicesSlice =
+  | ProcessSlice
+  | TextAndImageSlice
+  | SmallGallerySlice
+  | FaqSlice
+  | InfoSlice
+  | SmallHeroSlice
+  | FeaturesSlice
+  | HeroSlice
+  | CtaSlice;
 
 /**
  * Content for Course documents
@@ -265,7 +274,16 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type HowToApplyDocumentDataSlicesSlice = ProcessSlice | SmallHeroSlice;
+type HowToApplyDocumentDataSlicesSlice =
+  | SmallGallerySlice
+  | TextAndImageSlice
+  | HeroSlice
+  | InfoSlice
+  | FeaturesSlice
+  | FaqSlice
+  | CtaSlice
+  | ProcessSlice
+  | SmallHeroSlice;
 
 /**
  * Content for How To Apply documents
@@ -486,6 +504,83 @@ type CtaSliceVariation = CtaSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+
+/**
+ * Primary content in *Faq → Primary*
+ */
+export interface FaqSliceDefaultPrimary {
+  /**
+   * Heading field in *Faq → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *Faq → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Faq → Items*
+ */
+export interface FaqSliceDefaultItem {
+  /**
+   * Question field in *Faq → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.items[].question
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question: prismic.KeyTextField;
+
+  /**
+   * Answer field in *Faq → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.items[].answer
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Faq Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqSliceDefaultPrimary>,
+  Simplify<FaqSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Faq*
+ */
+type FaqSliceVariation = FaqSliceDefault;
+
+/**
+ * Faq Shared Slice
+ *
+ * - **API ID**: `faq`
+ * - **Description**: Faq
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSlice = prismic.SharedSlice<"faq", FaqSliceVariation>;
 
 /**
  * Primary content in *Features → Primary*
@@ -1341,6 +1436,11 @@ declare module "@prismicio/client" {
       CtaSlice,
       CtaSliceVariation,
       CtaSliceDefault,
+      FaqSlice,
+      FaqSliceDefaultPrimary,
+      FaqSliceDefaultItem,
+      FaqSliceVariation,
+      FaqSliceDefault,
       FeaturesSlice,
       FeaturesSliceDefaultPrimary,
       FeaturesSliceDefaultItem,

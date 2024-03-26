@@ -1,6 +1,9 @@
 {
   "format": "page",
   "id": "course",
+  "label": "Course",
+  "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -10,11 +13,39 @@
         "type": "UID"
       },
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "process": {
+              "type": "SharedSlice"
+            },
+            "text_and_image": {
+              "type": "SharedSlice"
+            },
+            "small_gallery": {
+              "type": "SharedSlice"
+            },
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "info": {
+              "type": "SharedSlice"
+            },
+            "small_hero": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "cta": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -44,8 +75,5 @@
         "type": "Text"
       }
     }
-  },
-  "label": "Course",
-  "repeatable": true,
-  "status": true
+  }
 }

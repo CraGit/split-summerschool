@@ -9,7 +9,7 @@ const Process = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-4 sm:px-6 lg:px-8 py-16 md:py-1"
+      className="px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Hero header text */}
