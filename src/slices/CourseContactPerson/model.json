@@ -1,0 +1,40 @@
+{
+  "id": "course_contact_person",
+  "type": "SharedSlice",
+  "name": "CourseContactPerson",
+  "description": "CourseContactPerson",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

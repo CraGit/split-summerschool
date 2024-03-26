@@ -12,11 +12,29 @@
         },
         "type": "UID"
       },
+      "course_name": {
+        "type": "Text",
+        "config": {
+          "label": "Course Name",
+          "placeholder": ""
+        }
+      },
+      "cover_image": {
+        "type": "Image",
+        "config": {
+          "label": "Cover Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "course_contact_person": {
+              "type": "SharedSlice"
+            },
             "process": {
               "type": "SharedSlice"
             },

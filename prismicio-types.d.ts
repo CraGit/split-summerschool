@@ -70,6 +70,7 @@ export type ContactUsDocument<Lang extends string = string> =
   >;
 
 type CourseDocumentDataSlicesSlice =
+  | CourseContactPersonSlice
   | ProcessSlice
   | TextAndImageSlice
   | SmallGallerySlice
@@ -84,6 +85,28 @@ type CourseDocumentDataSlicesSlice =
  * Content for Course documents
  */
 interface CourseDocumentData {
+  /**
+   * Course Name field in *Course*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course.course_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  course_name: prismic.KeyTextField;
+
+  /**
+   * Cover Image field in *Course*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course.cover_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  cover_image: prismic.ImageField<never>;
+
   /**
    * Slice Zone field in *Course*
    *
@@ -477,6 +500,71 @@ export type AllDocumentTypes =
   | HowToApplyDocument
   | NavigationDocument
   | UniversityOfSplitDocument;
+
+/**
+ * Primary content in *CourseContactPerson → Primary*
+ */
+export interface CourseContactPersonSliceDefaultPrimary {
+  /**
+   * Name field in *CourseContactPerson → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_contact_person.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Phone field in *CourseContactPerson → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_contact_person.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * Email field in *CourseContactPerson → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_contact_person.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for CourseContactPerson Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseContactPersonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CourseContactPersonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CourseContactPerson*
+ */
+type CourseContactPersonSliceVariation = CourseContactPersonSliceDefault;
+
+/**
+ * CourseContactPerson Shared Slice
+ *
+ * - **API ID**: `course_contact_person`
+ * - **Description**: CourseContactPerson
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseContactPersonSlice = prismic.SharedSlice<
+  "course_contact_person",
+  CourseContactPersonSliceVariation
+>;
 
 /**
  * Default variation for Cta Slice
@@ -1433,6 +1521,10 @@ declare module "@prismicio/client" {
       UniversityOfSplitDocumentData,
       UniversityOfSplitDocumentDataSlicesSlice,
       AllDocumentTypes,
+      CourseContactPersonSlice,
+      CourseContactPersonSliceDefaultPrimary,
+      CourseContactPersonSliceVariation,
+      CourseContactPersonSliceDefault,
       CtaSlice,
       CtaSliceVariation,
       CtaSliceDefault,
