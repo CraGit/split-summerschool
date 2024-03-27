@@ -154,8 +154,8 @@ export function Navbar({ programs, navigation }) {
                             <PrismicNextLink
                               field={link.primary.link}
                               className={clsx(
-                                "relative z-10 flex items-center text-lg font-medium duration-300 ease-in-out group-hover:text-purple-600",
-                                open ? "text-purple-600" : "text-purple-700"
+                                "relative z-10 flex items-center text-lg font-medium duration-300 ease-in-out group-hover:text-dark/80",
+                                open ? "text-purple-600" : "text-dark"
                               )}
                             >
                               {link.primary.label}
@@ -204,7 +204,7 @@ export function Navbar({ programs, navigation }) {
                                       )}
                                       onClick={close}
                                     >
-                                      <h5 className="text-lg font-semibold text-purple-600">
+                                      <h5 className="text-lg font-semibold text-dark">
                                         {item.child_label}
                                       </h5>
                                       {/* <p className="mt-1 text-sm text-purple-800 opacity-90">
@@ -232,8 +232,8 @@ export function Navbar({ programs, navigation }) {
                         className={clsx(
                           "relative z-10 text-lg font-medium",
                           pathname === link.primary.link
-                            ? "text-purple-600"
-                            : "text-purple-700 duration-300 ease-in-out group-hover:text-purple-600"
+                            ? "text-dark"
+                            : "text-dark duration-300 ease-in-out group-hover:text-dark/80"
                         )}
                       >
                         {link.primary.label}

@@ -21,7 +21,7 @@ const SmallHero = ({ slice }) => {
 
         <h1
           className="
-          max-w-2xl mt-4 text-center text-dark sm:mt-5 lg:max-w-none lg:text-left h1"
+          max-w-2xl mt-4 text-center text-dark sm:mt-5 lg:max-w-none lg:text-left h1 uppercase"
         >
           {slice.primary.heading}
         </h1>

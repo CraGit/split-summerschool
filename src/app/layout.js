@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { createClient } from "@/prismicio";
 import clsx from "clsx";
+import { Footer } from "@/components/Footer";
 
 const roboto = Roboto_Flex({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }) {
       <body className={clsx("font-sans", roboto.variable)}>
         <Header navigation={navigation} contact={contact} programs={programs} />
         {children}
+        <Footer />
       </body>
     </html>
   );
