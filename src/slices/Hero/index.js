@@ -25,14 +25,14 @@ const Hero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-tertiary/40"
+      className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-tertiary/50"
     >
       {/* Hero container */}
       <div className="max-w-screen-xl mx-auto" x-data="{ modalOpen: false }">
         {/* Hero text content */}
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start px-6 py-8 rounded-2xl">
           <div>
-            <span className="inline-block px-4 py-2 font-medium text-secondary bg-secondary/20 rounded-full shadow-md -rotate-1">
+            <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/80 rounded-full shadow-md -rotate-1">
               <>{slice.primary.overtitle}</>
             </span>
           </div>
@@ -52,10 +52,10 @@ const Hero = ({ slice }) => {
                 sizes="(min-width: 1280px) 39rem, (min-width: 1024px) 50vw, (min-width: 768px) 48rem, 100vw"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="absolute inline-flex w-20 h-20 bg-secondary rounded-full animate-ping opacity-60" />
+                <span className="absolute inline-flex w-20 h-20 bg-tertiary rounded-full animate-ping opacity-60" />
                 {/* Video modal button */}
                 <button
-                  className="relative z-10 flex items-center justify-center w-20 h-20 duration-300 ease-in-out rounded-full outline-none group bg-secondary/90 hover:bg-secondary/95"
+                  className="relative z-10 flex items-center justify-center w-20 h-20 duration-300 ease-in-out rounded-full outline-none group bg-tertiary/90 hover:bg-tertiary/95"
                   onClick={() => openModal()}
                 >
                   <Icon
@@ -81,13 +81,13 @@ const Hero = ({ slice }) => {
               />
             </Button>
             {/* <Button
-              variant="secondary"
+              variant="tertiary"
               className="mt-6 sm:ml-6 sm:mt-0"
               onClick={() => openModal()}
             >
               <Icon
                 icon="playFilled"
-                className="mr-3 text-secondary duration-300 ease-in-out h-7 w-7 group-hover:text-purple-50"
+                className="mr-3 text-tertiary duration-300 ease-in-out h-7 w-7 group-hover:text-purple-50"
               />
               Watch video
             </Button> */}

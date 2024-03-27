@@ -13,7 +13,7 @@ module.exports = {
         secondary: "#ff5400", //orange
         tertiary: "#b8d100", //green
         quaternary: "#23ffff", //blue
-        dark: "#1a1a1a", //black
+        dark: "#272577", //modra
       },
       fontFamily: {
         sans: ["var(--font-roboto)", "sans-serif"],

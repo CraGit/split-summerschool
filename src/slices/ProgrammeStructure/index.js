@@ -42,7 +42,6 @@ const ProgrammeStructure = ({ slice }) => {
           </div>
         </div>
       </section>
-      );
     </section>
   );
 };
