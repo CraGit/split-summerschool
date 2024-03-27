@@ -70,6 +70,10 @@ export type ContactUsDocument<Lang extends string = string> =
   >;
 
 type CourseDocumentDataSlicesSlice =
+  | LecturersSlice
+  | ImportantDatesSlice
+  | MainTopicsSlice
+  | ProgrammeStructureSlice
   | CourseContactPersonSlice
   | ProcessSlice
   | TextAndImageSlice
@@ -162,7 +166,7 @@ interface CourseDocumentData {
 export type CourseDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<CourseDocumentData>, "course", Lang>;
 
-type CoursesDocumentDataSlicesSlice = never;
+type CoursesDocumentDataSlicesSlice = CourseListSlice | SmallHeroSlice;
 
 /**
  * Content for Courses documents
@@ -567,6 +571,36 @@ export type CourseContactPersonSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for CourseList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *CourseList*
+ */
+type CourseListSliceVariation = CourseListSliceDefault;
+
+/**
+ * CourseList Shared Slice
+ *
+ * - **API ID**: `course_list`
+ * - **Description**: CourseList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseListSlice = prismic.SharedSlice<
+  "course_list",
+  CourseListSliceVariation
+>;
+
+/**
  * Default variation for Cta Slice
  *
  * - **API ID**: `default`
@@ -843,6 +877,91 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *ImportantDates → Primary*
+ */
+export interface ImportantDatesSliceDefaultPrimary {
+  /**
+   * Heading field in *ImportantDates → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: important_dates.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Course Dates field in *ImportantDates → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: important_dates.primary.course_dates
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  course_dates: prismic.KeyTextField;
+
+  /**
+   * Deadline for Application field in *ImportantDates → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: important_dates.primary.deadline_for_application
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  deadline_for_application: prismic.KeyTextField;
+
+  /**
+   * Confirmation of the course field in *ImportantDates → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: important_dates.primary.confirmation_of_the_course
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  confirmation_of_the_course: prismic.KeyTextField;
+
+  /**
+   * Payment due by field in *ImportantDates → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: important_dates.primary.payment_due_by
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  payment_due_by: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ImportantDates Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImportantDatesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImportantDatesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ImportantDates*
+ */
+type ImportantDatesSliceVariation = ImportantDatesSliceDefault;
+
+/**
+ * ImportantDates Shared Slice
+ *
+ * - **API ID**: `important_dates`
+ * - **Description**: ImportantDates
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImportantDatesSlice = prismic.SharedSlice<
+  "important_dates",
+  ImportantDatesSliceVariation
+>;
+
+/**
  * Primary content in *Info → Primary*
  */
 export interface InfoSliceDefaultPrimary {
@@ -1045,6 +1164,156 @@ type InfoSliceVariation = InfoSliceDefault;
 export type InfoSlice = prismic.SharedSlice<"info", InfoSliceVariation>;
 
 /**
+ * Primary content in *Lecturers → Primary*
+ */
+export interface LecturersSliceDefaultPrimary {
+  /**
+   * Heading field in *Lecturers → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: lecturers.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *Lecturers → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: lecturers.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Lecturers → Items*
+ */
+export interface LecturersSliceDefaultItem {
+  /**
+   * Name field in *Lecturers → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: lecturers.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Position field in *Lecturers → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: lecturers.items[].position
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  position: prismic.KeyTextField;
+
+  /**
+   * Image field in *Lecturers → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: lecturers.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Lecturers Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LecturersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<LecturersSliceDefaultPrimary>,
+  Simplify<LecturersSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Lecturers*
+ */
+type LecturersSliceVariation = LecturersSliceDefault;
+
+/**
+ * Lecturers Shared Slice
+ *
+ * - **API ID**: `lecturers`
+ * - **Description**: Lecturers
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LecturersSlice = prismic.SharedSlice<
+  "lecturers",
+  LecturersSliceVariation
+>;
+
+/**
+ * Primary content in *MainTopics → Primary*
+ */
+export interface MainTopicsSliceDefaultPrimary {
+  /**
+   * Heading field in *MainTopics → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_topics.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *MainTopics → Items*
+ */
+export interface MainTopicsSliceDefaultItem {
+  /**
+   * List Item field in *MainTopics → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_topics.items[].list_item
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  list_item: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for MainTopics Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MainTopicsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MainTopicsSliceDefaultPrimary>,
+  Simplify<MainTopicsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *MainTopics*
+ */
+type MainTopicsSliceVariation = MainTopicsSliceDefault;
+
+/**
+ * MainTopics Shared Slice
+ *
+ * - **API ID**: `main_topics`
+ * - **Description**: MainTopics
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MainTopicsSlice = prismic.SharedSlice<
+  "main_topics",
+  MainTopicsSliceVariation
+>;
+
+/**
  * Primary content in *NavigationItem → Primary*
  */
 export interface NavigationItemSliceDefaultPrimary {
@@ -1166,12 +1435,12 @@ export interface ProcessSliceDefaultItem {
   /**
    * Content field in *Process → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: process.items[].content
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: process.items[].item_content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  content: prismic.KeyTextField;
+  item_content: prismic.RichTextField;
 }
 
 /**
@@ -1202,6 +1471,66 @@ type ProcessSliceVariation = ProcessSliceDefault;
 export type ProcessSlice = prismic.SharedSlice<
   "process",
   ProcessSliceVariation
+>;
+
+/**
+ * Primary content in *ProgrammeStructure → Primary*
+ */
+export interface ProgrammeStructureSliceDefaultPrimary {
+  /**
+   * Heading field in *ProgrammeStructure → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programme_structure.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ProgrammeStructure → Items*
+ */
+export interface ProgrammeStructureSliceDefaultItem {
+  /**
+   * List Item field in *ProgrammeStructure → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programme_structure.items[].list_item
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  list_item: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ProgrammeStructure Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgrammeStructureSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProgrammeStructureSliceDefaultPrimary>,
+  Simplify<ProgrammeStructureSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ProgrammeStructure*
+ */
+type ProgrammeStructureSliceVariation = ProgrammeStructureSliceDefault;
+
+/**
+ * ProgrammeStructure Shared Slice
+ *
+ * - **API ID**: `programme_structure`
+ * - **Description**: ProgrammeStructure
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgrammeStructureSlice = prismic.SharedSlice<
+  "programme_structure",
+  ProgrammeStructureSliceVariation
 >;
 
 /**
@@ -1525,6 +1854,9 @@ declare module "@prismicio/client" {
       CourseContactPersonSliceDefaultPrimary,
       CourseContactPersonSliceVariation,
       CourseContactPersonSliceDefault,
+      CourseListSlice,
+      CourseListSliceVariation,
+      CourseListSliceDefault,
       CtaSlice,
       CtaSliceVariation,
       CtaSliceDefault,
@@ -1542,10 +1874,24 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ImportantDatesSlice,
+      ImportantDatesSliceDefaultPrimary,
+      ImportantDatesSliceVariation,
+      ImportantDatesSliceDefault,
       InfoSlice,
       InfoSliceDefaultPrimary,
       InfoSliceVariation,
       InfoSliceDefault,
+      LecturersSlice,
+      LecturersSliceDefaultPrimary,
+      LecturersSliceDefaultItem,
+      LecturersSliceVariation,
+      LecturersSliceDefault,
+      MainTopicsSlice,
+      MainTopicsSliceDefaultPrimary,
+      MainTopicsSliceDefaultItem,
+      MainTopicsSliceVariation,
+      MainTopicsSliceDefault,
       NavigationItemSlice,
       NavigationItemSliceDefaultPrimary,
       NavigationItemSliceDefaultItem,
@@ -1556,6 +1902,11 @@ declare module "@prismicio/client" {
       ProcessSliceDefaultItem,
       ProcessSliceVariation,
       ProcessSliceDefault,
+      ProgrammeStructureSlice,
+      ProgrammeStructureSliceDefaultPrimary,
+      ProgrammeStructureSliceDefaultItem,
+      ProgrammeStructureSliceVariation,
+      ProgrammeStructureSliceDefault,
       SmallGallerySlice,
       SmallGallerySliceDefaultPrimary,
       SmallGallerySliceVariation,

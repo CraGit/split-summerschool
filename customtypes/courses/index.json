@@ -1,14 +1,24 @@
 {
   "format": "page",
   "id": "courses",
+  "label": "Courses",
+  "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "course_list": {
+              "type": "SharedSlice"
+            },
+            "small_hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -38,8 +48,5 @@
         "type": "Text"
       }
     }
-  },
-  "label": "Courses",
-  "repeatable": false,
-  "status": true
+  }
 }

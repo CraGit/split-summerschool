@@ -1,0 +1,34 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "even",
+				"type": "Text"
+			},
+			"course_dates": {
+				"__TYPE__": "FieldContent",
+				"value": "exactly",
+				"type": "Text"
+			},
+			"deadline_for_application": {
+				"__TYPE__": "FieldContent",
+				"value": "three",
+				"type": "Text"
+			},
+			"confirmation_of_the_course": {
+				"__TYPE__": "FieldContent",
+				"value": "bound",
+				"type": "Text"
+			},
+			"payment_due_by": {
+				"__TYPE__": "FieldContent",
+				"value": "halfway",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

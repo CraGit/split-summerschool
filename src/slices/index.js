@@ -4,13 +4,18 @@ import dynamic from "next/dynamic";
 
 export const components = {
   course_contact_person: dynamic(() => import("./CourseContactPerson")),
+  course_list: dynamic(() => import("./CourseList")),
   cta: dynamic(() => import("./Cta")),
   faq: dynamic(() => import("./Faq")),
   features: dynamic(() => import("./Features")),
   hero: dynamic(() => import("./Hero")),
+  important_dates: dynamic(() => import("./ImportantDates")),
   info: dynamic(() => import("./Info")),
+  lecturers: dynamic(() => import("./Lecturers")),
+  main_topics: dynamic(() => import("./MainTopics")),
   navigation_item: dynamic(() => import("./NavigationItem")),
   process: dynamic(() => import("./Process")),
+  programme_structure: dynamic(() => import("./ProgrammeStructure")),
   small_gallery: dynamic(() => import("./SmallGallery")),
   small_hero: dynamic(() => import("./SmallHero")),
   text_and_image: dynamic(() => import("./TextAndImage")),

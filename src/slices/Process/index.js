@@ -3,8 +3,23 @@
  * @typedef {import("@prismicio/react").SliceComponentProps<ProcessSlice>} ProcessProps
  * @param {ProcessProps}
  */
+import { PrismicRichText } from "@prismicio/react";
 
 const Process = ({ slice }) => {
+  const components = {
+    paragraph: ({ children }) => (
+      <p className="mt-3 max-w-xl text-lg text-dark sm:text-xl sm:leading-relaxed">
+        {children}
+      </p>
+    ),
+    list: ({ children }) => <ul className="py-2 list-inside">{children}</ul>,
+    oList: ({ children }) => (
+      <ol className="py-2 list-decimal list-inside">{children}</ol>
+    ),
+    listItem: ({ children }) => <li className="py-1">{children}</li>,
+    oListItem: ({ children }) => <li className="py-1">{children}</li>,
+  };
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -35,7 +50,10 @@ const Process = ({ slice }) => {
                 <div className="flex items-center justify-between mb-6">
                   <p className="text-xl font-bold">{item.heading}</p>
                 </div>
-                <p className="text-gray-600">{item.heading}</p>
+                <PrismicRichText
+                  field={item.item_content}
+                  components={components}
+                />
               </div>
             );
           })}

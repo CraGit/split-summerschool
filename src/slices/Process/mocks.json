@@ -27,11 +27,17 @@
 						}
 					],
 					[
-						"content",
+						"item_content",
 						{
-							"__TYPE__": "FieldContent",
-							"value": "hold",
-							"type": "Text"
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Excepteur dolor aliqua deserunt elit qui culpa esse. Sint aliqua anim aliquip tempor voluptate non aliquip cupidatat deserunt mollit anim. Amet in reprehenderit reprehenderit magna deserunt duis Lorem exercitation cillum ea Lorem occaecat occaecat Lorem."
+									}
+								}
+							]
 						}
 					]
 				]

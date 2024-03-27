@@ -1,0 +1,34 @@
+{
+  "id": "main_topics",
+  "type": "SharedSlice",
+  "name": "MainTopics",
+  "description": "MainTopics",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "list_item": {
+          "type": "Text",
+          "config": {
+            "label": "List Item",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

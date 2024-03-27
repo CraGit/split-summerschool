@@ -1,8 +1,8 @@
 {
-  "id": "process",
+  "id": "important_dates",
   "type": "SharedSlice",
-  "name": "Process",
-  "description": "Process",
+  "name": "ImportantDates",
+  "description": "ImportantDates",
   "variations": [
     {
       "id": "default",
@@ -19,32 +19,36 @@
             "placeholder": ""
           }
         },
-        "content": {
+        "course_dates": {
           "type": "Text",
           "config": {
-            "label": "Content",
+            "label": "Course Dates",
+            "placeholder": ""
+          }
+        },
+        "deadline_for_application": {
+          "type": "Text",
+          "config": {
+            "label": "Deadline for Application",
+            "placeholder": ""
+          }
+        },
+        "confirmation_of_the_course": {
+          "type": "Text",
+          "config": {
+            "label": "Confirmation of the course",
+            "placeholder": ""
+          }
+        },
+        "payment_due_by": {
+          "type": "Text",
+          "config": {
+            "label": "Payment due by",
             "placeholder": ""
           }
         }
       },
-      "items": {
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
-        "item_content": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Content",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        }
-      }
+      "items": {}
     }
   ]
 }

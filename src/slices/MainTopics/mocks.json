@@ -1,0 +1,28 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "honor",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"list_item",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "limited",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]
