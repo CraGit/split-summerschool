@@ -28,9 +28,12 @@ const Hero = ({ slice }) => {
       className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-tertiary/50"
     >
       {/* Hero container */}
-      <div className="max-w-screen-xl mx-auto" x-data="{ modalOpen: false }">
+      <div
+        className="max-w-screen-xl mx-auto md:grid md:grid-cols-2"
+        x-data="{ modalOpen: false } "
+      >
         {/* Hero text content */}
-        <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start px-6 py-8 rounded-2xl">
+        <div className="flex flex-col items-center justify-center lg:items-start px-6 py-8 rounded-2xl">
           <div>
             <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/80 rounded-full shadow-md -rotate-1">
               {slice.primary.overtitle}
@@ -43,7 +46,7 @@ const Hero = ({ slice }) => {
           >
             {slice.primary.heading}
           </h1>
-          <div className="flex flex-col justify-center w-full max-w-3xl mx-auto my-2 md:my-6 lg:col-span-6 lg:mt-0 lg:max-w-none">
+          <div className="flex flex-col justify-center w-full max-w-3xl mx-auto my-2 md:my-6 lg:col-span-6 lg:mt-0 lg:max-w-none md:hidden">
             <div className="relative rounded-2xl overflow-hidden ">
               <PrismicNextImage
                 field={slice.primary.image}
@@ -82,7 +85,29 @@ const Hero = ({ slice }) => {
             </Button>
           </div>
         </div>
-
+        <div className="md:flex flex-col justify-center w-full max-w-3xl mx-auto my-2 md:my-6  lg:mt-0 lg:max-w-none hidden">
+          <div className="relative rounded-2xl overflow-hidden ">
+            <PrismicNextImage
+              field={slice.primary.image}
+              priority
+              className="w-full h-auto"
+              sizes="(min-width: 1280px) 39rem, (min-width: 1024px) 50vw, (min-width: 768px) 48rem, 100vw"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="absolute inline-flex w-20 h-20 bg-tertiary rounded-full animate-ping opacity-60" />
+              {/* Video modal button */}
+              <button
+                className="relative z-10 flex items-center justify-center w-20 h-20 duration-300 ease-in-out rounded-full outline-none group bg-tertiary/90 hover:bg-tertiary/95"
+                onClick={() => openModal()}
+              >
+                <Icon
+                  icon="playFilled"
+                  className="w-12 h-12 duration-300 ease-in-out text-white/90 group-hover:text-white/95"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
         {/* Video modal*/}
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
