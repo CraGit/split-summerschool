@@ -29,9 +29,6 @@
             "faq": {
               "type": "SharedSlice"
             },
-            "cta": {
-              "type": "SharedSlice"
-            },
             "process": {
               "type": "SharedSlice"
             },

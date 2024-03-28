@@ -16,7 +16,7 @@ const ProgrammeStructure = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="px-4 sm:px-6 lg:px-8 pb-14 bg-gradient-to-br from-tertiary/60 to-tertiary/50 pt-1"
+        className="px-4 sm:px-6 lg:px-8 pb-4 md:pb-14 bg-gradient-to-br from-tertiary/60 to-tertiary/50 pt-1"
       >
         <div className="relative rounded-xl bg-white  sm:mt-14 max-w-screen-xl mx-auto ">
           <span className="absolute -top-7 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-tertiary/80 to-tertiary/60 shadow-md sm:left-10">

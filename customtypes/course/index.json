@@ -70,9 +70,6 @@
             },
             "hero": {
               "type": "SharedSlice"
-            },
-            "cta": {
-              "type": "SharedSlice"
             }
           }
         }

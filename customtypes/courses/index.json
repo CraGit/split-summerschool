@@ -11,9 +11,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "course_list": {
-              "type": "SharedSlice"
-            },
             "small_hero": {
               "type": "SharedSlice"
             }

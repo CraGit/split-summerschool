@@ -84,8 +84,7 @@ type CourseDocumentDataSlicesSlice =
   | InfoSlice
   | SmallHeroSlice
   | FeaturesSlice
-  | HeroSlice
-  | CtaSlice;
+  | HeroSlice;
 
 /**
  * Content for Course documents
@@ -168,7 +167,7 @@ interface CourseDocumentData {
 export type CourseDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<CourseDocumentData>, "course", Lang>;
 
-type CoursesDocumentDataSlicesSlice = CourseListSlice | SmallHeroSlice;
+type CoursesDocumentDataSlicesSlice = SmallHeroSlice;
 
 /**
  * Content for Courses documents
@@ -234,6 +233,16 @@ export type CoursesDocument<Lang extends string = string> =
   >;
 
 type HomepageDocumentDataSlicesSlice =
+  | SmallHeroSlice
+  | MainTopicsSlice
+  | ProcessSlice
+  | ProgrammeStructureSlice
+  | LecturersSlice
+  | ImportantDatesSlice
+  | FaqSlice
+  | ContactInformationSlice
+  | CourseContactPersonSlice
+  | ContactFormSlice
   | SmallGallerySlice
   | FeaturesSlice
   | InfoSlice
@@ -310,7 +319,6 @@ type HowToApplyDocumentDataSlicesSlice =
   | InfoSlice
   | FeaturesSlice
   | FaqSlice
-  | CtaSlice
   | ProcessSlice
   | SmallHeroSlice;
 
@@ -741,63 +749,6 @@ export type CourseContactPersonSlice = prismic.SharedSlice<
   "course_contact_person",
   CourseContactPersonSliceVariation
 >;
-
-/**
- * Default variation for CourseList Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CourseListSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *CourseList*
- */
-type CourseListSliceVariation = CourseListSliceDefault;
-
-/**
- * CourseList Shared Slice
- *
- * - **API ID**: `course_list`
- * - **Description**: CourseList
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CourseListSlice = prismic.SharedSlice<
-  "course_list",
-  CourseListSliceVariation
->;
-
-/**
- * Default variation for Cta Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CtaSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *Cta*
- */
-type CtaSliceVariation = CtaSliceDefault;
-
-/**
- * Cta Shared Slice
- *
- * - **API ID**: `cta`
- * - **Description**: Cta
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 
 /**
  * Primary content in *Faq → Primary*
@@ -2114,12 +2065,6 @@ declare module "@prismicio/client" {
       CourseContactPersonSliceDefaultPrimary,
       CourseContactPersonSliceVariation,
       CourseContactPersonSliceDefault,
-      CourseListSlice,
-      CourseListSliceVariation,
-      CourseListSliceDefault,
-      CtaSlice,
-      CtaSliceVariation,
-      CtaSliceDefault,
       FaqSlice,
       FaqSliceDefaultPrimary,
       FaqSliceDefaultItem,

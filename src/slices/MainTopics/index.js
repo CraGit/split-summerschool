@@ -18,7 +18,7 @@ const MainTopics = ({ slice }) => {
       className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 "
     >
       <div className="relative rounded-xl bg-gradient-to-br from-tertiary/60 to-tertiary/50  sm:mt-14 max-w-screen-xl mx-auto">
-        <span className="absolute -top-7 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/80 to-secondary/60 shadow-md sm:left-10">
+        <span className="absolute -top-7 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/70 to-secondary/60 shadow-md sm:left-10">
           <Icon icon="certificate" className="h-8 w-8 text-dark" />
         </span>
         <div className="mt-2 px-4 py-10 sm:px-10 sm:py-12">

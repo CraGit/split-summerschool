@@ -11,7 +11,7 @@ const Features = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="overflow-hidden px-4 sm:px-6  lg:px-8 py-16 bg-tertiary/60 "
+      className="overflow-hidden px-4 sm:px-6  lg:px-8 py-16 bg-tertiary/40 "
     >
       <div className="mx-auto max-w-screen-xl p-8 md:p-16 rounded-3xl">
         {/* Centered content with feature list */}
