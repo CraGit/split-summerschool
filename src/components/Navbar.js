@@ -252,7 +252,7 @@ export function Navbar({ navigation }) {
           </div>
 
           {/* Call to action button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block py-4">
             <Button href={navigation.data.button_link}>
               {navigation.data.button_text}
             </Button>

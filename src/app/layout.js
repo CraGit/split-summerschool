@@ -29,7 +29,7 @@ export default async function RootLayout({ children }) {
       <body className={clsx("font-sans", roboto.variable)}>
         <Header navigation={navigation} contact={contact} />
         {children}
-        <Footer />
+        <Footer navigation={navigation} />
       </body>
     </html>
   );

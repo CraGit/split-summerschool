@@ -62,10 +62,10 @@ const ImportantDates = ({ slice }) => {
             icon="moodKid"
             title="Course Dates"
             gradientColors={{
-              bgColor: "bg-yellow-200",
-              iconBgColor: "bg-yellow-400",
-              startColor: "from-yellow-400",
-              endColor: "to-yellow-500",
+              bgColor: "bg-secondary/40",
+              iconBgColor: "bg-secondary/60",
+              startColor: "from-secondary/40",
+              endColor: "to-secondary/60",
             }}
             text={slice.primary.course_dates}
           />
@@ -74,10 +74,10 @@ const ImportantDates = ({ slice }) => {
             icon="calendar"
             title="Deadline for Application"
             gradientColors={{
-              bgColor: "bg-purple-50",
-              iconBgColor: "bg-purple-200",
-              startColor: "from-purple-200",
-              endColor: "to-purple-300",
+              bgColor: "bg-primary/40",
+              iconBgColor: "bg-primary/60",
+              startColor: "from-primary/40",
+              endColor: "to-primary/60",
             }}
             text={slice.primary.deadline_for_application}
           />
@@ -88,10 +88,10 @@ const ImportantDates = ({ slice }) => {
 
             "
             gradientColors={{
-              bgColor: "bg-rose-50",
-              iconBgColor: "bg-rose-200",
-              startColor: "from-rose-100",
-              endColor: "to-rose-300",
+              bgColor: "bg-tertiary/40",
+              iconBgColor: "bg-tertiary/60",
+              startColor: "from-tertiary/40",
+              endColor: "to-tertiary/60",
             }}
             text={slice.primary.confirmation_of_the_course}
           />
@@ -100,10 +100,10 @@ const ImportantDates = ({ slice }) => {
             icon="users"
             title="Payment due by"
             gradientColors={{
-              bgColor: "bg-blue-50",
-              iconBgColor: "bg-blue-200",
-              startColor: "from-blue-100",
-              endColor: "to-blue-300",
+              bgColor: "bg-quaternary/40",
+              iconBgColor: "bg-quaternary/60",
+              startColor: "from-quaternary/40",
+              endColor: "to-quaternary/60",
             }}
             text={slice.primary.payment_due_by}
           />

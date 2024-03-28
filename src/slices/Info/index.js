@@ -21,11 +21,11 @@ const Info = ({ slice }) => {
           {/* Section content */}
           <div className="flex flex-col justify-center pr-10 xl:pr-0">
             <div>
-              <span className="inline-block -rotate-1 rounded-full bg-secondary/30 px-4 py-2 font-medium text-secondary shadow-md">
+              <span className="inline-block -rotate-1 rounded-full bg-tertiary/70 px-4 py-2 font-medium text-dark shadow-md">
                 {slice.primary.overtitle}
               </span>
             </div>
-            <h2 className="h2 mt-3.5 max-w-xl text-secondary sm:mt-4">
+            <h2 className="h2 mt-3.5 max-w-xl text-dark sm:mt-4">
               {slice.primary.heading}
             </h2>
             <p className="mt-3 max-w-lg text-lg leading-relaxed text-dark">
@@ -35,7 +35,7 @@ const Info = ({ slice }) => {
             <div className="mt-8 font-medium lg:mt-10">
               <PrismicNextLink
                 field={slice.primary.link}
-                className="group mt-1.5 flex w-[126px] max-w-full cursor-pointer items-center border-b-2 border-solid border-secondary bg-transparent px-0 py-0.5 text-left leading-6 text-secondary no-underline transition duration-300 ease-in-out hover:border-purple-400 hover:text-purple-500"
+                className="group mt-1.5 flex w-[126px] max-w-full cursor-pointer items-center border-b-2 border-solid border-tertiary bg-transparent px-0 py-0.5 text-left leading-6 text-dark no-underline transition duration-300 ease-in-out hover:border-tertiary/70 hover:text-tertiary/80"
               >
                 <span className="text-left text-base font-bold">
                   {slice.primary.link_text}
@@ -52,7 +52,7 @@ const Info = ({ slice }) => {
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-20 lg:gap-4 xl:gap-8">
             <div
               className={clsx(
-                "bg-secondary/30 w-full rounded-xl px-6 py-10 lg:px-5 xl:px-10",
+                "bg-tertiary/40 w-full rounded-xl px-6 py-10 lg:px-5 xl:px-10",
                 ""
               )}
             >
@@ -66,7 +66,7 @@ const Info = ({ slice }) => {
                       {slice.primary.box1_heading}
                     </h3>
                     <div className="mt-3">
-                      <div className="inline-block h-6 -rotate-1 rounded-xl bg-secondary/50 px-3 align-top text-sm font-medium leading-6 text-dark">
+                      <div className="inline-block h-6 -rotate-1 rounded-xl bg-tertiary/70 px-3 align-top text-sm font-medium leading-6 text-dark">
                         {slice.primary.box1_subtitle}
                       </div>
                     </div>
@@ -80,7 +80,7 @@ const Info = ({ slice }) => {
                   <Button
                     href={slice.primary.box1_button_link}
                     className="mt-6"
-                    variant="secondary"
+                    variant="primary"
                     size="sm"
                   >
                     {slice.primary.box1_button_text}
@@ -96,7 +96,7 @@ const Info = ({ slice }) => {
             </div>
             <div
               className={clsx(
-                "bg-primary/30 lg:-translate-y-20 w-full rounded-xl px-6 py-10 lg:px-5 xl:px-10"
+                "bg-primary/40 lg:-translate-y-20 w-full rounded-xl px-6 py-10 lg:px-5 xl:px-10"
               )}
             >
               <div className="relative">

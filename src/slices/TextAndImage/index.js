@@ -8,13 +8,19 @@ import clsx from "clsx";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import lightYellowBlob from "/public/images/illustrations/blob-light-yellow.svg";
+import lightGreenBlob from "/public/images/illustrations/blob-light-green.svg";
 import lightPurpleBlob from "/public/images/illustrations/blob-light-purple.svg";
 import lightRoseBlob from "/public/images/illustrations/blob-light-rose.svg";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 
 const TextAndImage = ({ slice }) => {
-  const bgBlobs = [lightYellowBlob, lightPurpleBlob, lightRoseBlob];
+  const bgBlobs = [
+    lightYellowBlob,
+    lightPurpleBlob,
+    lightRoseBlob,
+    lightGreenBlob,
+  ];
   const components = {
     paragraph: ({ children }) => (
       <p className="mt-3 max-w-xl text-lg text-dark sm:text-xl sm:leading-relaxed">
@@ -22,12 +28,11 @@ const TextAndImage = ({ slice }) => {
       </p>
     ),
   };
-  console.log(slice.variation);
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="overflow-hidden px-4 sm:px-6 lg:px-8 py-16"
+      className="overflow-hidden px-4 sm:px-6 lg:px-8 py-16 mb-8"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Block 1 */}
@@ -41,12 +46,12 @@ const TextAndImage = ({ slice }) => {
             )}
           >
             <div>
-              <span className="inline-block -rotate-1 rounded-full bg-secondary/20 px-4 py-2 font-medium text-secondary shadow-md">
+              <span className="inline-block -rotate-1 rounded-full bg-tertiary/70 px-4 py-2 font-medium text-dark shadow-md">
                 {slice.primary.overtitle}
               </span>
             </div>
             <div>
-              <h2 className="h3 mt-3.5 font-bold text-secondary">
+              <h2 className="h3 mt-3.5 font-bold text-dark">
                 {slice.primary.heading}
               </h2>
 
@@ -78,8 +83,8 @@ const TextAndImage = ({ slice }) => {
             {/* Blob background decoration on large screens */}
             <div className="hidden lg:block">
               <Image
-                src={bgBlobs[0]}
-                className="absolute inset-0 h-full w-full transform lg:scale-135"
+                src={bgBlobs[3]}
+                className="absolute inset-0 h-full w-full transform lg:scale-125"
                 alt="blob background decoration"
               />
             </div>

@@ -1,17 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-
+import { PrismicNextLink } from "@prismicio/next";
 import logo from "/public/images/logo.png";
 import { Icon } from "@/components/Icon";
-
-const siteLinks = [
-  { label: "Home", href: "/" },
-  { label: "About us", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Parents", href: "/gallery" },
-  { label: "Contact us", href: "/contact" },
-];
 
 function SocialLink({ className, href, icon }) {
   return (
@@ -27,7 +19,7 @@ function SocialLink({ className, href, icon }) {
   );
 }
 
-export const Footer = ({ programs, contact }) => {
+export const Footer = ({ navigation }) => {
   return (
     <footer className="space-y-8 divide-y divide-purple-400/20 bg-tertiary/50 px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
       {/* Top section: blocks */}
@@ -44,9 +36,12 @@ export const Footer = ({ programs, contact }) => {
           </div>
           {/* Mission statement */}
           <div className="mt-6 text-lg text-dark">
-            Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Diam sit amet quam vehicula elementum sed sit.
+            <strong> Split Summer School</strong>
+            <br />
+            University of Split <br /> Faculty of Civil Engineering,
+            Architecture and Geodesy
           </div>
+
           {/* Social links */}
           <div className="mt-5 w-full lg:mt-6">
             <div className="flex justify-start space-x-4">
@@ -62,22 +57,24 @@ export const Footer = ({ programs, contact }) => {
         {/* Block 3 */}
         <div className="flex-shrink sm:order-4 lg:order-none lg:col-span-2">
           <h6 className="relative text-xl font-bold tracking-wide text-dark">
-            <span className="relative z-20">Site Links</span>
-            <span className="absolute -bottom-1 left-0 z-10 h-1 w-12 rounded-lg bg-gradient-to-r from-yellow-400 to-yellow-500" />
+            <span className="relative z-20">Links</span>
+            <span className="absolute -bottom-1 left-0 z-10 h-1 w-12 rounded-lg bg-gradient-to-r from-primary/60 to-primary/80" />
           </h6>
           {/* Site links */}
           <ul className="mt-6 divide-y divide-purple-400/20 text-lg">
-            {siteLinks.map((link, index) => (
+            {navigation.data.slices.map((item, index) => (
               <li
-                key={`footer-site-link-${link.label}`}
+                key={`footer-site-link-${item.primary.label}`}
                 className={clsx(
                   "font-medium text-dark duration-300 ease-in-out hover:text-dark/70",
                   index == 0 && "pb-2",
-                  index == siteLinks.length && "pt-2",
-                  index > 0 && index < siteLinks.length && "py-2"
+                  index == navigation.data.slices.length && "pt-2",
+                  index > 0 && index < navigation.data.slices.length && "py-2"
                 )}
               >
-                <Link href={link.href}>{link.label}</Link>
+                <PrismicNextLink field={item.primary.link}>
+                  {item.primary.label}
+                </PrismicNextLink>
               </li>
             ))}
           </ul>
@@ -93,15 +90,15 @@ export const Footer = ({ programs, contact }) => {
             {/* Address */}
             <li className="flex max-w-xs flex-shrink">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-yellow-400">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary">
                   <Icon icon="mapPin" className="h-6 w-6 text-dark" />
                 </span>
               </div>
               <div className="ml-3 mt-0 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-dakr">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Address
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-dark/80 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   Matice hrvatske 15, 21 000 Split
                 </p>
               </div>
@@ -109,15 +106,15 @@ export const Footer = ({ programs, contact }) => {
             {/* Email */}
             <li className="flex flex-shrink-0">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-200">
-                  <Icon icon="mail" className="h-6 w-6 text-dark" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-tertiary/60">
+                  <Icon icon="mail" className="h-6 w-6 text-dark/80" />
                 </span>
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-dakr">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Email
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-dark/80 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   summerschool@gradst.hr
                 </p>
               </div>
@@ -125,15 +122,15 @@ export const Footer = ({ programs, contact }) => {
             {/* Phone number */}
             <li className="flex flex-shrink-0">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-200">
-                  <Icon icon="phone" className="h-6 w-6 text-dark" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary/40">
+                  <Icon icon="phone" className="h-6 w-6 text-dark/80" />
                 </span>
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-dakr">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Phone
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-dark/80 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   +385 21 303 366
                 </p>
               </div>

@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * @typedef {import("@prismicio/client").Content.ContactFormSlice} ContactFormSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ContactFormSlice>} ContactFormProps
@@ -9,38 +11,92 @@ import { Button } from "@/components/Button";
 import dotsLargeGrid from "/public/images/illustrations/dots-large-grid.svg";
 import dotsGrid from "/public/images/illustrations/dots-grid.svg";
 import dotsStrip from "/public/images/illustrations/dots-strip.svg";
+import { useRouter } from "next/navigation";
 
-const fields = [
-  {
-    name: "name",
-    label: "Name *",
-    type: "text",
-    placeholder: "John Doe",
-    required: true,
-  },
-  {
-    name: "email",
-    label: "Email *",
-    type: "email",
-    placeholder: "john@email.com",
-    required: true,
-  },
-  {
-    name: "phone",
-    label: "Phone",
-    type: "text",
-    placeholder: "(123) 456-7890",
-    required: true,
-  },
-  {
-    name: "message",
-    label: "Message *",
-    type: "textarea",
-    placeholder: "Message",
-    required: true,
-  },
-];
 const ContactForm = ({ slice }) => {
+  const router = useRouter();
+  const handleValidation = (data) => {
+    const errors = {};
+
+    if (!data.name) {
+      errors.name = "Name is required";
+    }
+
+    if (!data.email) {
+      errors.email = "Email is required";
+    }
+
+    if (!data.phone) {
+      errors.phone = "Phone number is required";
+    }
+
+    if (!data.message) {
+      errors.message = "Message is required";
+    }
+
+    return errors;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value,
+    };
+
+    const errors = handleValidation(data);
+
+    if (Object.keys(errors).length === 0) {
+      const res = await fetch("/api/sendmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      // console.log(result);
+      if (!result.error) {
+        router.push("/message-sent");
+      }
+    } else {
+      // Handle validation errors, you can display them here if needed
+    }
+  };
+  const fields = [
+    {
+      name: "name",
+      label: "Name *",
+      type: "text",
+      placeholder: "John Doe",
+      required: true,
+    },
+    {
+      name: "email",
+      label: "Email *",
+      type: "email",
+      placeholder: "john@email.com",
+      required: true,
+    },
+    {
+      name: "phone",
+      label: "Phone",
+      type: "text",
+      placeholder: "(123) 456-7890",
+      required: true,
+    },
+    {
+      name: "message",
+      label: "Message *",
+      type: "textarea",
+      placeholder: "Message",
+      required: true,
+    },
+  ];
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -90,7 +146,7 @@ const ContactForm = ({ slice }) => {
               </p>
             </div>
             {/* Contact form */}
-            <form className="mt-8" action="#">
+            <form className="mt-8" onSubmit={handleSubmit}>
               {fields.map((field, index) => (
                 <div
                   key={`contact-form-field-${index}}`}

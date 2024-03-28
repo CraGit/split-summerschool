@@ -22,38 +22,38 @@ const CourseContactPerson = ({ slice }) => {
         {/* Contact information cards */}
         <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-14 sm:grid-cols-4 sm:gap-6 lg:mt-20 lg:grid-cols-3 xl:gap-12">
           {/* Address card */}
-          <div className="rounded-3xl bg-yellow-200 px-4 py-8 sm:col-span-2 sm:p-8 lg:col-span-1">
+          <div className="rounded-3xl bg-primary/40 px-4 py-8 sm:col-span-2 sm:p-8 lg:col-span-1">
             <div className="flex sm:flex-col lg:flex-row">
               <div>
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary">
                   <Icon icon="user" className="h-8 w-8 text-dark" />
                 </span>
               </div>
               <div className="ml-6 flex-1 sm:ml-0 sm:mt-3 lg:ml-6 lg:mt-0">
-                <h5 className="flex items-center text-xl font-semibold text-purple-900">
+                <h5 className="flex items-center text-xl font-semibold text-dark">
                   Name
                 </h5>
-                <p className="mt-1.5 text-base leading-relaxed text-purple-800">
+                <p className="mt-1.5 text-base leading-relaxed text-dark/90">
                   <>{slice.primary.name}</>
                 </p>
               </div>
             </div>
           </div>
           {/* Email card */}
-          <div className="rounded-3xl bg-purple-50 px-4 py-8 sm:col-span-2 sm:p-8 sm:py-10 lg:col-span-1">
+          <div className="rounded-3xl bg-tertiary/30 px-4 py-8 sm:col-span-2 sm:p-8 sm:py-10 lg:col-span-1">
             <div className="flex sm:flex-col lg:flex-row">
               <div>
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-200">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-tertiary/60">
                   <Icon icon="mail" className="h-8 w-8 text-dark" />
                 </span>
               </div>
               <div className="ml-6 flex-1 sm:ml-0 sm:mt-3 lg:ml-6 lg:mt-0">
-                <h5 className="flex items-center text-xl font-semibold text-purple-900">
+                <h5 className="flex items-center text-xl font-semibold text-dark">
                   Email
                 </h5>
                 <a
                   href={`mailto:${slice.primary.email}`}
-                  className="mt-1.5 text-base leading-relaxed text-purple-800"
+                  className="mt-1.5 text-base leading-relaxed text-dark/90"
                 >
                   <>{slice.primary.email}</>
                 </a>
@@ -61,20 +61,20 @@ const CourseContactPerson = ({ slice }) => {
             </div>
           </div>
           {/* Phone number card */}
-          <div className="rounded-3xl bg-rose-50 px-4 py-8 sm:col-span-2 sm:col-start-2 sm:p-8 sm:py-10 lg:col-span-1 lg:col-start-3">
+          <div className="rounded-3xl bg-secondary/20 px-4 py-8 sm:col-span-2 sm:col-start-2 sm:p-8 sm:py-10 lg:col-span-1 lg:col-start-3">
             <div className="flex sm:flex-col lg:flex-row">
               <div>
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-200">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary/40">
                   <Icon icon="phone" className="h-8 w-8 text-dark" />
                 </span>
               </div>
               <div className="ml-6 flex-1 sm:ml-0 sm:mt-3 lg:ml-6 lg:mt-0">
-                <h5 className="flex items-center text-xl font-semibold text-purple-900">
+                <h5 className="flex items-center text-xl font-semibold text-dark">
                   Phone
                 </h5>
                 <a
                   href={`tel:${slice.primary.phone}`}
-                  className="mt-1.5 text-base leading-relaxed text-purple-800"
+                  className="mt-1.5 text-base leading-relaxed text-dark/90"
                 >
                   <>{slice.primary.phone}</>
                 </a>

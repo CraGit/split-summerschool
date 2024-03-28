@@ -21,15 +21,15 @@ export function ContactHeader({ contact }) {
             {/* Address */}
             <li className="flex max-w-xs flex-shrink">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-yellow-400">
-                  <Icon icon="mapPin" className="h-6 w-6 text-purple-700" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary">
+                  <Icon icon="mapPin" className="h-6 w-6 text-dark/80" />
                 </span>
               </div>
               <div className="ml-3 mt-0 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Address
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   {contact.address}
                 </p>
               </div>
@@ -38,15 +38,15 @@ export function ContactHeader({ contact }) {
             {/* Email */}
             <li className="flex flex-shrink-0">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-200">
-                  <Icon icon="mail" className="h-6 w-6 text-purple-700" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-tertiary/60">
+                  <Icon icon="mail" className="h-6 w-6 text-dark/80" />
                 </span>
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Email
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   {contact.email}
                 </p>
               </div>
@@ -55,15 +55,15 @@ export function ContactHeader({ contact }) {
             {/* Phone number */}
             <li className="flex flex-shrink-0">
               <div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-rose-200">
-                  <Icon icon="phone" className="h-6 w-6 text-purple-700" />
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary/40">
+                  <Icon icon="phone" className="h-6 w-6 text-dark/80" />
                 </span>
               </div>
               <div className="ml-3 flex-1 xl:ml-4">
-                <h5 className="flex items-center text-base font-semibold text-purple-900">
+                <h5 className="flex items-center text-base font-semibold text-dark">
                   Phone
                 </h5>
-                <p className="mt-0.5 text-sm leading-relaxed text-purple-800 text-opacity-90">
+                <p className="mt-0.5 text-sm leading-relaxed text-dark/90 text-opacity-90">
                   {contact.phone}
                 </p>
               </div>
