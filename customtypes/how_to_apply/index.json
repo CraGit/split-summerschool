@@ -11,6 +11,27 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "programme_structure": {
+              "type": "SharedSlice"
+            },
+            "important_dates": {
+              "type": "SharedSlice"
+            },
+            "lecturers": {
+              "type": "SharedSlice"
+            },
+            "main_topics": {
+              "type": "SharedSlice"
+            },
+            "course_contact_person": {
+              "type": "SharedSlice"
+            },
+            "contact_information": {
+              "type": "SharedSlice"
+            },
+            "contact_form": {
+              "type": "SharedSlice"
+            },
             "small_gallery": {
               "type": "SharedSlice"
             },

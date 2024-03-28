@@ -32,6 +32,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contact_information": {
+              "type": "SharedSlice"
+            },
+            "contact_form": {
+              "type": "SharedSlice"
+            },
             "lecturers": {
               "type": "SharedSlice"
             },

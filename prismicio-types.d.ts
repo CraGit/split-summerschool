@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type ContactUsDocumentDataSlicesSlice =
+  | FaqSlice
   | ContactInformationSlice
   | ContactFormSlice;
 
@@ -72,6 +73,8 @@ export type ContactUsDocument<Lang extends string = string> =
   >;
 
 type CourseDocumentDataSlicesSlice =
+  | ContactInformationSlice
+  | ContactFormSlice
   | LecturersSlice
   | ImportantDatesSlice
   | MainTopicsSlice
@@ -313,6 +316,13 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type HowToApplyDocumentDataSlicesSlice =
+  | ProgrammeStructureSlice
+  | ImportantDatesSlice
+  | LecturersSlice
+  | MainTopicsSlice
+  | CourseContactPersonSlice
+  | ContactInformationSlice
+  | ContactFormSlice
   | SmallGallerySlice
   | TextAndImageSlice
   | HeroSlice
@@ -441,7 +451,22 @@ export type NavigationDocument<Lang extends string = string> =
     Lang
   >;
 
-type UniversityOfSplitDocumentDataSlicesSlice = TextAndImageSlice;
+type UniversityOfSplitDocumentDataSlicesSlice =
+  | SmallHeroSlice
+  | SmallGallerySlice
+  | ProgrammeStructureSlice
+  | MainTopicsSlice
+  | ProcessSlice
+  | LecturersSlice
+  | InfoSlice
+  | ImportantDatesSlice
+  | FaqSlice
+  | FeaturesSlice
+  | HeroSlice
+  | CourseContactPersonSlice
+  | ContactInformationSlice
+  | ContactFormSlice
+  | TextAndImageSlice;
 
 /**
  * Content for University of Split documents

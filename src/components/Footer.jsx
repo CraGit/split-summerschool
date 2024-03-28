@@ -139,11 +139,22 @@ export const Footer = ({ navigation }) => {
         </div>
       </div>
       {/* Bottom section */}
-      <div className="mx-auto flex max-w-md flex-col justify-between py-8 sm:max-w-none sm:flex-row lg:max-w-screen-2xl">
+      <div className="mx-auto flex max-w-md flex-col justify-between pt-8 pb-2 sm:max-w-none sm:flex-row lg:max-w-screen-2xl ">
         {/* Copyright note */}
         <span className="text-base text-dark">
-          © {new Date().getFullYear()} Split Summer School. All rights
+          © {new Date().getFullYear()}{" "}
+          <span className="font-bold">Split Summer School</span>. All rights
           reserved.
+        </span>
+        <span className="text-dark/80 py-4 md:py-0">
+          Web by{" "}
+          <a
+            target="_blank"
+            href="https://killerclick.com"
+            className="font-bold text-dark hover:text-dark/90 duration-300 ease-in-out"
+          >
+            Killer Click
+          </a>
         </span>
       </div>
     </footer>

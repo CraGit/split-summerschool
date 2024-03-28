@@ -32,7 +32,7 @@ const TextAndImage = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="overflow-hidden px-4 sm:px-6 lg:px-8 py-16 mb-8"
+      className="overflow-hidden px-4 sm:px-6 lg:px-8 py-4 md:py-16 mb-8"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Block 1 */}

@@ -11,6 +11,48 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "small_hero": {
+              "type": "SharedSlice"
+            },
+            "small_gallery": {
+              "type": "SharedSlice"
+            },
+            "programme_structure": {
+              "type": "SharedSlice"
+            },
+            "main_topics": {
+              "type": "SharedSlice"
+            },
+            "process": {
+              "type": "SharedSlice"
+            },
+            "lecturers": {
+              "type": "SharedSlice"
+            },
+            "info": {
+              "type": "SharedSlice"
+            },
+            "important_dates": {
+              "type": "SharedSlice"
+            },
+            "faq": {
+              "type": "SharedSlice"
+            },
+            "features": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "course_contact_person": {
+              "type": "SharedSlice"
+            },
+            "contact_information": {
+              "type": "SharedSlice"
+            },
+            "contact_form": {
+              "type": "SharedSlice"
+            },
             "text_and_image": {
               "type": "SharedSlice"
             }
