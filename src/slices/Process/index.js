@@ -30,13 +30,13 @@ const Process = ({ slice }) => {
         {/* Hero header text */}
         <div className="relative pb-8">
           <h2 className="h2 mx-auto mt-4 max-w-3xl text-center text-dark">
-            <>{slice.primary.heading}</>
+            {slice.primary.heading}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-dark sm:mt-5">
-            <>{slice.primary.content}</>
+            {slice.primary.content}
           </p>
         </div>
-        <div className="grid gap-10 lg:grid-cols-4 sm:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-3 sm:grid-cols-2">
           {slice.items.map((item, index, array) => {
             const isLast = index === array.length - 1;
             return (

@@ -4,7 +4,9 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type ContactUsDocumentDataSlicesSlice = never;
+type ContactUsDocumentDataSlicesSlice =
+  | ContactInformationSlice
+  | ContactFormSlice;
 
 /**
  * Content for Contact Us documents
@@ -431,7 +433,7 @@ export type NavigationDocument<Lang extends string = string> =
     Lang
   >;
 
-type UniversityOfSplitDocumentDataSlicesSlice = never;
+type UniversityOfSplitDocumentDataSlicesSlice = TextAndImageSlice;
 
 /**
  * Content for University of Split documents
@@ -504,6 +506,176 @@ export type AllDocumentTypes =
   | HowToApplyDocument
   | NavigationDocument
   | UniversityOfSplitDocument;
+
+/**
+ * Primary content in *ContactForm → Primary*
+ */
+export interface ContactFormSliceDefaultPrimary {
+  /**
+   * Heading field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Content field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * Button Text field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactForm Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactFormSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactForm*
+ */
+type ContactFormSliceVariation = ContactFormSliceDefault;
+
+/**
+ * ContactForm Shared Slice
+ *
+ * - **API ID**: `contact_form`
+ * - **Description**: ContactForm
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactFormSlice = prismic.SharedSlice<
+  "contact_form",
+  ContactFormSliceVariation
+>;
+
+/**
+ * Primary content in *ContactInformation → Primary*
+ */
+export interface ContactInformationSliceDefaultPrimary {
+  /**
+   * Heading field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Content field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * Address field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * Email field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phone field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * Location Embed field in *ContactInformation → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_information.primary.location_embed
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location_embed: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactInformation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactInformationSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContactInformationSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContactInformation*
+ */
+type ContactInformationSliceVariation = ContactInformationSliceDefault;
+
+/**
+ * ContactInformation Shared Slice
+ *
+ * - **API ID**: `contact_information`
+ * - **Description**: ContactInformation
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactInformationSlice = prismic.SharedSlice<
+  "contact_information",
+  ContactInformationSliceVariation
+>;
 
 /**
  * Primary content in *CourseContactPerson → Primary*
@@ -1802,9 +1974,89 @@ export type TextAndImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *TextAndImage → Primary*
+ */
+export interface TextAndImageSliceImageRightPrimary {
+  /**
+   * Heading field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Image field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Content field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Button Text field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *TextAndImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+}
+
+/**
+ * Image Right variation for TextAndImage Slice
+ *
+ * - **API ID**: `imageRight`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextAndImageSliceImageRight = prismic.SharedSliceVariation<
+  "imageRight",
+  Simplify<TextAndImageSliceImageRightPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *TextAndImage*
  */
-type TextAndImageSliceVariation = TextAndImageSliceDefault;
+type TextAndImageSliceVariation =
+  | TextAndImageSliceDefault
+  | TextAndImageSliceImageRight;
 
 /**
  * TextAndImage Shared Slice
@@ -1850,6 +2102,14 @@ declare module "@prismicio/client" {
       UniversityOfSplitDocumentData,
       UniversityOfSplitDocumentDataSlicesSlice,
       AllDocumentTypes,
+      ContactFormSlice,
+      ContactFormSliceDefaultPrimary,
+      ContactFormSliceVariation,
+      ContactFormSliceDefault,
+      ContactInformationSlice,
+      ContactInformationSliceDefaultPrimary,
+      ContactInformationSliceVariation,
+      ContactInformationSliceDefault,
       CourseContactPersonSlice,
       CourseContactPersonSliceDefaultPrimary,
       CourseContactPersonSliceVariation,
@@ -1917,8 +2177,10 @@ declare module "@prismicio/client" {
       SmallHeroSliceDefault,
       TextAndImageSlice,
       TextAndImageSliceDefaultPrimary,
+      TextAndImageSliceImageRightPrimary,
       TextAndImageSliceVariation,
       TextAndImageSliceDefault,
+      TextAndImageSliceImageRight,
     };
   }
 }

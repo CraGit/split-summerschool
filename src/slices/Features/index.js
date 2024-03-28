@@ -34,7 +34,7 @@ const Features = ({ slice }) => {
                   <Image
                     className="mr-3 h-7 w-7 flex-shrink-0"
                     src={checkmark}
-                    alt=""
+                    alt="checkmark icon"
                   />
                   <span>{item.feature}</span>
                 </li>

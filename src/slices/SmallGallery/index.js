@@ -9,7 +9,6 @@ import LightGallery from "lightgallery/react";
  */
 import "lightgallery/css/lightgallery.css";
 const SmallGallery = ({ slice }) => {
-  console.log(slice.primary.image_1);
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -21,14 +20,14 @@ const SmallGallery = ({ slice }) => {
         <div className="relative">
           <div className="flex justify-center">
             <span className="inline-block -rotate-1 rounded-full bg-secondary/20 px-4 py-2 font-medium text-secondary shadow-md">
-              <>{slice.primary.overtitle}</>
+              {slice.primary.overtitle}
             </span>
           </div>
           <h2 className="h1 mx-auto mt-4 max-w-3xl text-center text-secondary">
-            <>{slice.primary.heading}</>
+            {slice.primary.heading}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-dark sm:mt-5">
-            <>{slice.primary.content}</>
+            {slice.primary.content}
           </p>
         </div>
 

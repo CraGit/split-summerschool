@@ -61,5 +61,73 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "imageRight",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "value",
+				"type": "Text"
+			},
+			"overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "graph",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+					"width": 4480,
+					"height": 4480
+				},
+				"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+				"width": 4480,
+				"height": 4480,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Occaecat in incididunt qui aute proident nisi non ad dolore cillum excepteur. Culpa ad duis deserunt. Laboris sint cillum cillum sunt nulla."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "son",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

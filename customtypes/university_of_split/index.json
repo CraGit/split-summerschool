@@ -1,14 +1,21 @@
 {
   "format": "page",
   "id": "university_of_split",
+  "label": "University of Split",
+  "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "text_and_image": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -38,8 +45,5 @@
         "type": "Text"
       }
     }
-  },
-  "label": "University of Split",
-  "repeatable": false,
-  "status": true
+  }
 }

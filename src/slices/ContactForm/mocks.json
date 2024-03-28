@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "wet",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "mirror",
+				"type": "Text"
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "judge",
+				"type": "Text"
+			},
+			"overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "event",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

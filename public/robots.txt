@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://split-summerschool.com
+
+# Sitemaps
+Sitemap: https://split-summerschool.com/sitemap.xml

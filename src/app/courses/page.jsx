@@ -8,7 +8,6 @@ export default async function Page() {
   const client = createClient();
   const page = await client.getSingle("courses");
   const courses = await client.getAllByType("course");
-  console.log(courses);
 
   return (
     <>

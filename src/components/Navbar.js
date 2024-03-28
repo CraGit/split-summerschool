@@ -12,9 +12,8 @@ import logo from "/public/images/logo.png";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 
-export function Navbar({ programs, navigation }) {
+export function Navbar({ navigation }) {
   const pathname = usePathname();
-  console.log(navigation);
 
   function MenuIcon({ open }) {
     return (
@@ -140,7 +139,6 @@ export function Navbar({ programs, navigation }) {
           <div className="hidden items-center justify-between md:space-x-6 lg:flex lg:space-x-10">
             {navigation.data.slices.map((link) => (
               <Fragment key={`desktop-link-${link.primary.label}`}>
-                {console.log(link)}
                 {link.items.length > 0 ? (
                   <Menu as="div" className="relative">
                     {({ open }) => (

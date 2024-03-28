@@ -1,0 +1,39 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "difficulty",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "fruit",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "FieldContent",
+				"value": "largest",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "lead",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "vowel",
+				"type": "Text"
+			},
+			"location_embed": {
+				"__TYPE__": "FieldContent",
+				"value": "brush",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -18,13 +18,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const client = await createClient();
   const navigation = await client.getSingle("navigation");
-  console.log(navigation.data.slices);
 
-  const programs = [
-    { slug: "courses", title: "Courses" },
-    { slug: "how_to_apply", title: "How to Apply" },
-    { slug: "contact_us", title: "Contact Us" },
-  ];
   const contact = {
     address: "Matice hrvatske 15, 21 000 Split",
     email: "summerschool@gradst.hr",
@@ -33,7 +27,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-gradient-to-b  text-dark">
       <body className={clsx("font-sans", roboto.variable)}>
-        <Header navigation={navigation} contact={contact} programs={programs} />
+        <Header navigation={navigation} contact={contact} />
         {children}
         <Footer />
       </body>

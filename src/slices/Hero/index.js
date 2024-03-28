@@ -33,7 +33,7 @@ const Hero = ({ slice }) => {
         <div className="flex flex-col items-center justify-center lg:col-span-6 lg:items-start px-6 py-8 rounded-2xl">
           <div>
             <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/80 rounded-full shadow-md -rotate-1">
-              <>{slice.primary.overtitle}</>
+              {slice.primary.overtitle}
             </span>
           </div>
 
@@ -80,17 +80,6 @@ const Hero = ({ slice }) => {
                 stroke={2}
               />
             </Button>
-            {/* <Button
-              variant="tertiary"
-              className="mt-6 sm:ml-6 sm:mt-0"
-              onClick={() => openModal()}
-            >
-              <Icon
-                icon="playFilled"
-                className="mr-3 text-tertiary duration-300 ease-in-out h-7 w-7 group-hover:text-purple-50"
-              />
-              Watch video
-            </Button> */}
           </div>
         </div>
 

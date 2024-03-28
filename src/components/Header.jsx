@@ -8,11 +8,9 @@ import clsx from "clsx";
 export function Header({ programs, contact, navigation }) {
   const pathname = usePathname();
   return (
-    <header
-      className={clsx(pathname === "/parents" ? "bg-white" : "bg-purple-25")}
-    >
+    <header>
       <ContactHeader contact={contact} />
-      <Navbar programs={programs} navigation={navigation} />
+      <Navbar navigation={navigation} />
     </header>
   );
 }

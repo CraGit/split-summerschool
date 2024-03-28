@@ -7,25 +7,22 @@ import Image from "next/image";
 import clsx from "clsx";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
-import highlight from "/public/images/illustrations/underline-simple-light-purple.svg";
 import lightYellowBlob from "/public/images/illustrations/blob-light-yellow.svg";
 import lightPurpleBlob from "/public/images/illustrations/blob-light-purple.svg";
 import lightRoseBlob from "/public/images/illustrations/blob-light-rose.svg";
-import dotsStrip from "/public/images/illustrations/dots-large-strip.svg";
-import dots from "/public/images/illustrations/dots.svg";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 
-const bgBlobs = [lightYellowBlob, lightPurpleBlob, lightRoseBlob];
-const components = {
-  paragraph: ({ children }) => (
-    <p className="mt-3 max-w-xl text-lg text-dark sm:text-xl sm:leading-relaxed">
-      {children}
-    </p>
-  ),
-};
-
 const TextAndImage = ({ slice }) => {
+  const bgBlobs = [lightYellowBlob, lightPurpleBlob, lightRoseBlob];
+  const components = {
+    paragraph: ({ children }) => (
+      <p className="mt-3 max-w-xl text-lg text-dark sm:text-xl sm:leading-relaxed">
+        {children}
+      </p>
+    ),
+  };
+  console.log(slice.variation);
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -39,39 +36,43 @@ const TextAndImage = ({ slice }) => {
           {/* Block text content */}
           <div
             className={clsx(
-              "relative z-10 order-2 flex flex-col justify-center lg:col-span-6 lg:text-left"
+              slice.variation === "imageRight" ? "order-1" : "order-2",
+              "relative z-10 flex flex-col justify-center lg:col-span-6 lg:text-left"
             )}
           >
             <div>
               <span className="inline-block -rotate-1 rounded-full bg-secondary/20 px-4 py-2 font-medium text-secondary shadow-md">
-                <>{slice.primary.overtitle}</>
+                {slice.primary.overtitle}
               </span>
             </div>
             <div>
               <h2 className="h3 mt-3.5 font-bold text-secondary">
-                <>{slice.primary.heading}</>
+                {slice.primary.heading}
               </h2>
 
               <PrismicRichText
                 field={slice.primary.content}
                 components={components}
               />
-              <div className="flex flex-col items-center mt-8 overflow-hidden sm:flex-row">
-                <Button href={slice.primary.button_link}>
-                  {slice.primary.button_text}
-                  <Icon
-                    icon="arrowNarrowRight"
-                    className="w-6 h-6 ml-3 group-hover:animate-horizontal-bounce"
-                    stroke={2}
-                  />
-                </Button>
-              </div>
+              {slice.primary.button_text && slice.primary.button_link && (
+                <div className="flex flex-col items-center mt-8 overflow-hidden sm:flex-row">
+                  <Button href={slice.primary.button_link}>
+                    {slice.primary.button_text}
+                    <Icon
+                      icon="arrowNarrowRight"
+                      className="w-6 h-6 ml-3 group-hover:animate-horizontal-bounce"
+                      stroke={2}
+                    />
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
           {/* Block graphics */}
           <div
             className={clsx(
-              "relative order-1 mx-auto w-full max-w-xl lg:col-span-6 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
+              "relative mx-auto w-full max-w-xl lg:col-span-6 lg:mx-0 lg:flex lg:max-w-none lg:items-center",
+              slice.variation === "imageRight" ? "order-2" : "order-1"
             )}
           >
             {/* Blob background decoration on large screens */}
@@ -79,7 +80,7 @@ const TextAndImage = ({ slice }) => {
               <Image
                 src={bgBlobs[0]}
                 className="absolute inset-0 h-full w-full transform lg:scale-135"
-                alt=""
+                alt="blob background decoration"
               />
             </div>
 

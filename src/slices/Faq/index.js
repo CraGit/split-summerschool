@@ -36,12 +36,12 @@ const Faq = ({ slice }) => {
             <Image
               className="absolute -left-60 top-10 hidden h-auto w-28 2xl:block"
               src={questionMark}
-              alt=""
+              alt="question mark icon"
             />
             <Image
               className="absolute -right-60 bottom-10 hidden h-auto w-28 2xl:block"
               src={bulb}
-              alt=""
+              alt="bulb icon"
             />
           </div>
           {slice.items.map((faq, index) => (
