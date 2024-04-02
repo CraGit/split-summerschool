@@ -33,7 +33,7 @@ const ContactInformation = ({ slice }) => {
           <div className="rounded-3xl bg-primary/30 px-4 py-8 sm:col-span-2 sm:p-8 lg:col-span-1">
             <div className="flex sm:flex-col lg:flex-row">
               <div>
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-tertiary/60">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/60">
                   <Icon icon="mapPin" className="h-8 w-8 text-dark/80" />
                 </span>
               </div>
