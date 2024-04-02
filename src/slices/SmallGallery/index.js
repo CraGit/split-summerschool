@@ -13,7 +13,7 @@ const SmallGallery = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative px-4 sm:px-6 lg:px-8 py-16 bg-tertiary/40"
+      className="relative px-4 sm:px-6 lg:px-8 py-16 bg-dark/80"
     >
       <div className="mx-auto max-w-screen-xl">
         {/* Hero header text */}
@@ -23,10 +23,10 @@ const SmallGallery = ({ slice }) => {
               {slice.primary.overtitle}
             </span>
           </div>
-          <h2 className="h1 mx-auto mt-4 max-w-3xl text-center text-dark">
+          <h2 className="h1 mx-auto mt-4 max-w-3xl text-center text-white">
             {slice.primary.heading}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-dark sm:mt-5">
+          <p className="mx-auto mt-4 max-w-2xl text-center text-xl leading-relaxed text-white sm:mt-5">
             {slice.primary.content}
           </p>
         </div>
