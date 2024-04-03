@@ -76,7 +76,7 @@ export function Navbar({ navigation }) {
           >
             <Popover.Panel
               as="div"
-              className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-gradient-to-tr from-tertiary/90 to-tertiary px-4 py-16 sm:px-8"
+              className="absolute inset-x-0 top-0 z-40 w-screen overflow-y-scroll bg-white/95 px-4 py-16 sm:px-8"
             >
               <div className="flex h-full w-full flex-col items-center justify-center">
                 <div className="mx-auto flex w-full flex-col items-center justify-evenly space-y-6">
