@@ -8,7 +8,7 @@ const SmallHero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-tertiary/50"
+      className="px-4 sm:px-6 lg:px-8 pb-8 md:py-16 bg-gradient-to-b from-tertiary/30 to-tertiary/40"
     >
       <div className="flex flex-col items-center justify-center  px-6 py-8 maxw-2xl mx-auto">
         {slice.primary.overtitle && (

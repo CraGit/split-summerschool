@@ -21,7 +21,7 @@ function SocialLink({ className, href, icon }) {
 
 export const Footer = ({ navigation }) => {
   return (
-    <footer className="space-y-8 divide-y divide-purple-400/20 bg-primary/60 px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
+    <footer className="space-y-8 divide-y divide-purple-400/20 bg-white  px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8 shadow-md">
       {/* Top section: blocks */}
       <div className="mx-auto grid max-w-md gap-y-8 sm:max-w-none sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 md:gap-x-12 lg:max-w-screen-2xl lg:grid-cols-11 lg:gap-8 xl:gap-12">
         {/* Block 1 */}
