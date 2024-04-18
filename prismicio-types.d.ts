@@ -1011,9 +1011,97 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceHeroBgPrimary {
+  /**
+   * Heading field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Overtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  overtitle: prismic.KeyTextField;
+
+  /**
+   * Subheading field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheading: prismic.KeyTextField;
+
+  /**
+   * Image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Button Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Video Embed Link field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.video_embed_link
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  video_embed_link: prismic.KeyTextField;
+}
+
+/**
+ * HeroBg variation for Hero Slice
+ *
+ * - **API ID**: `heroBg`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceHeroBg = prismic.SharedSliceVariation<
+  "heroBg",
+  Simplify<HeroSliceHeroBgPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceHeroBg;
 
 /**
  * Hero Shared Slice
@@ -2102,8 +2190,10 @@ declare module "@prismicio/client" {
       FeaturesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
+      HeroSliceHeroBgPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      HeroSliceHeroBg,
       ImportantDatesSlice,
       ImportantDatesSliceDefaultPrimary,
       ImportantDatesSliceVariation,

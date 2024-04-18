@@ -60,5 +60,72 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "heroBg",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "getting",
+				"type": "Text"
+			},
+			"overtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "coming",
+				"type": "Text"
+			},
+			"subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "being",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "his",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"video_embed_link": {
+				"__TYPE__": "FieldContent",
+				"value": "beside",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
