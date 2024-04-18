@@ -115,9 +115,11 @@ const Hero = ({ slice }) => {
         <>
           <div className="absolute z-30 h-full px-2 w-fit">
             <div className="flex flex-col justify-center h-full items-center w-full gap-6">
-              <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/90 rounded-full shadow-md -rotate-1">
-                {slice.primary.overtitle}
-              </span>
+              {slice.primary.overtitle && (
+                <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/90 rounded-full shadow-md -rotate-1">
+                  {slice.primary.overtitle}
+                </span>
+              )}
 
               <h1
                 className="
@@ -127,27 +129,33 @@ const Hero = ({ slice }) => {
               </h1>
 
               {/* Hero buttons */}
-              <div className="flex flex-col items-center mt-8 overflow-hidden sm:flex-row">
-                <Button href={slice.primary.button_link}>
-                  {slice.primary.button_text}
-                  <Icon
-                    icon="arrowNarrowRight"
-                    className="w-6 h-6 ml-3 group-hover:animate-horizontal-bounce"
-                    stroke={2}
-                  />
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="mt-6 sm:ml-6 sm:mt-0"
-                  onClick={() => openModal()}
-                >
-                  <Icon
-                    icon="playFilled"
-                    className="mr-3 text-white duration-300 ease-in-out h-7 w-7 group-hover:text-dark/90"
-                  />
-                  Watch video
-                </Button>
-              </div>
+
+              {(slice.primary.button_text ||
+                slice.primary.video_embed_link) && (
+                <div className="flex flex-col items-center mt-8 overflow-hidden sm:flex-row">
+                  <Button href={slice.primary.button_link}>
+                    {slice.primary.button_text}
+                    <Icon
+                      icon="arrowNarrowRight"
+                      className="w-6 h-6 ml-3 group-hover:animate-horizontal-bounce"
+                      stroke={2}
+                    />
+                  </Button>
+                  {slice.primary.video_embed_link && (
+                    <Button
+                      variant="secondary"
+                      className="mt-6 sm:ml-6 sm:mt-0"
+                      onClick={() => openModal()}
+                    >
+                      <Icon
+                        icon="playFilled"
+                        className="mr-3 text-white duration-300 ease-in-out h-7 w-7 group-hover:text-dark/90"
+                      />
+                      Watch video
+                    </Button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div className="z-0 h-[80svh]">
