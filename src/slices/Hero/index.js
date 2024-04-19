@@ -113,7 +113,7 @@ const Hero = ({ slice }) => {
       )}
       {slice.variation === "heroBg" && (
         <>
-          <div className="absolute z-30 h-full px-2 w-fit">
+          <div className="absolute z-10 h-full px-2 w-fit">
             <div className="flex flex-col justify-center h-full items-center w-full gap-6">
               {slice.primary.overtitle && (
                 <span className="inline-block px-4 py-2 font-medium text-dark bg-tertiary/90 rounded-full shadow-md -rotate-1">
@@ -170,7 +170,7 @@ const Hero = ({ slice }) => {
             />
           </div>
 
-          <div className="absolute inset-0  from-dark/50 to-dark/80 bg-gradient-to-br z-20" />
+          <div className="absolute inset-0  from-dark/50 to-dark/80 bg-gradient-to-br z-0" />
         </>
       )}
       {/* Video modal*/}
