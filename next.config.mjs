@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/admin",
+        destination: "https://prismic.io/dashboard",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
