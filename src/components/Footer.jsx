@@ -120,7 +120,7 @@ export const Footer = ({ navigation }) => {
               </div>
             </li>
             {/* Phone number */}
-            <li className="flex flex-shrink-0">
+            {/* <li className="flex flex-shrink-0">
               <div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary/40">
                   <Icon icon="phone" className="h-6 w-6 text-dark/80" />
@@ -134,7 +134,7 @@ export const Footer = ({ navigation }) => {
                   +385 21 303 366
                 </p>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

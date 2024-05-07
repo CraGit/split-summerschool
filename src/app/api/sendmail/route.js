@@ -12,7 +12,7 @@ export async function POST(req) {
               Phone: ${body.phone}\r\n        
               Message: ${body.message}`;
   const data = {
-    to: "splitsummerschoolcom@gmail.com",
+    to: "summerschool@gradst.hr",
     from: "splitsummerschoolcom@gmail.com",
     replyTo: body.email,
     subject: "Split Summer School - Upit s web stranice",
