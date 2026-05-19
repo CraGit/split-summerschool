@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Icon } from "@/components/Icon";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/logo.svg";
 
 export function ContactHeader({ contact }) {
   return (
@@ -13,7 +13,7 @@ export function ContactHeader({ contact }) {
           {/* Site branding */}
           <div className="w-60 flex-shrink-0 flex-grow-0">
             <Link href="/">
-              <Image src={logo} alt="logo" className="h-auto" />
+              <Image src={logo} alt="logo" className="h-auto transform scale-90" />
             </Link>
           </div>
           {/* Contact information */}

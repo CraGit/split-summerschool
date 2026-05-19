@@ -8,7 +8,7 @@ import { Menu, Transition, Popover } from "@headlessui/react";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
 import { useState } from "react";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/logo.svg";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 
@@ -263,7 +263,7 @@ export function Navbar({ navigation }) {
               <Image
                 src={logo}
                 alt="Split Summer School Logo"
-                className="h-auto"
+                className="h-auto transform scale-90"
               />
             </Link>
           </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
-import logo from "/public/images/logo.png";
+import logo from "/public/images/logo.svg";
 import { Icon } from "@/components/Icon";
 
 function SocialLink({ className, href, icon }) {
@@ -30,7 +30,7 @@ export const Footer = ({ navigation }) => {
           <div className="flex items-center">
             <div className="w-60 flex-shrink-0 flex-grow-0">
               <Link href="/">
-                <Image src={logo} alt="logo" className="h-auto" />
+                <Image src={logo} alt="logo" className="h-auto transform scale-90" />
               </Link>
             </div>
           </div>
