@@ -9,6 +9,7 @@ import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
 import { useState } from "react";
 import logo from "/public/images/logo.svg";
+import sveucilisteLogo from "/public/images/sveuciliste-u-splitu-logo.svg";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 
@@ -258,12 +259,24 @@ export function Navbar({ navigation }) {
             </Button>
           </div>
           {/* Logo on smaller screens: < lg */}
-          <div className="block w-48 flex-shrink-0 flex-grow-0 sm:w-52 lg:hidden">
-            <Link href="/">
+          <div className="flex items-center gap-1.5 lg:hidden">
+            <Link href="/" className="inline-flex flex-shrink-0">
               <Image
                 src={logo}
                 alt="Split Summer School Logo"
-                className="h-auto transform scale-90"
+                className="h-10 w-auto object-contain sm:h-12"
+              />
+            </Link>
+            <Link
+              href="https://www.unist.hr/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex flex-shrink-0 self-start pt-1"
+            >
+              <Image
+                src={sveucilisteLogo}
+                alt="University of Split logo"
+                className="h-8 w-auto object-contain sm:h-10"
               />
             </Link>
           </div>

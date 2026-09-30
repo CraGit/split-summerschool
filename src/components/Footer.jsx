@@ -3,6 +3,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
 import logo from "/public/images/logo.svg";
+import sveucilisteLogo from "/public/images/sveuciliste-u-splitu-logo.svg";
 import { Icon } from "@/components/Icon";
 
 function SocialLink({ className, href, icon }) {
@@ -27,12 +28,26 @@ export const Footer = ({ navigation }) => {
         {/* Block 1 */}
         <div className="flex flex-col lg:col-span-4 lg:mx-auto">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-60 flex-shrink-0 flex-grow-0">
-              <Link href="/">
-                <Image src={logo} alt="logo" className="h-auto transform scale-90" />
-              </Link>
-            </div>
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-2">
+            <Link href="/" className="inline-flex max-w-full flex-shrink-0">
+              <Image
+                src={logo}
+                alt="Split Summer School logo"
+                className="h-16 w-auto object-contain sm:h-20"
+              />
+            </Link>
+            <Link
+              href="https://www.unist.hr/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex max-w-full flex-shrink-0"
+            >
+              <Image
+                src={sveucilisteLogo}
+                alt="University of Split logo"
+                className="h-12 w-auto object-contain sm:h-14"
+              />
+            </Link>
           </div>
           {/* Mission statement */}
           <div className="mt-6 text-lg text-dark">

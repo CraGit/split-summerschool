@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Icon } from "@/components/Icon";
 import logo from "/public/images/logo.svg";
+import sveucilisteLogo from "/public/images/sveuciliste-u-splitu-logo.svg";
 
 export function ContactHeader({ contact }) {
   return (
@@ -11,9 +12,25 @@ export function ContactHeader({ contact }) {
       <div className="relative mx-auto max-w-screen-xl border-b border-purple-200/30 py-5">
         <div className="flex items-center justify-between">
           {/* Site branding */}
-          <div className="w-60 flex-shrink-0 flex-grow-0">
-            <Link href="/">
-              <Image src={logo} alt="logo" className="h-auto transform scale-90" />
+          <div className="flex items-center gap-1 sm:gap-2">
+            <Link href="/" className="inline-flex flex-shrink-0">
+              <Image
+                src={logo}
+                alt="Split Summer School logo"
+                className="h-16 w-auto object-contain sm:h-20"
+              />
+            </Link>
+            <Link
+              href="https://www.unist.hr/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex flex-shrink-0 self-start pt-1 sm:pt-2"
+            >
+              <Image
+                src={sveucilisteLogo}
+                alt="University of Split logo"
+                className="h-12 w-auto object-contain sm:h-14"
+              />
             </Link>
           </div>
           {/* Contact information */}
